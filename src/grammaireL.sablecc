@@ -7,6 +7,7 @@ chiffre = ['0' .. '9'];
 alpha = [lettre + ['_' + '$']];
 alphanum = [lettre + chiffre];
 
+
 Tokens
 
 espaces = (' ' | 13 | 10)+;
@@ -16,13 +17,54 @@ parenthese_fermante = ')';
 virgule = ',';
 nombre = chiffre+;
 identif = alpha alphanum*;
-
+ou = '|';
+et = '&';
+egale = '=';
+inf = '<';
+plus  = '+';
+minus = '-';
+div = '/';
+mult = '*';
+non = '!';
+si = 'si';
+alors = 'alors ';
+sinon = 'sinon';
+tantque= 'tantque';
+faire = 'faire';
+retour ='retour';
+appel = 'appel';
+ecrire ='ecrire';
+open = '{';
+close = '}';
 Ignored Tokens
 
 espaces, commentaire;
 
 Productions
 
+exp = {ou} exp ou t1 | t1;
+t1 = {et} t1 et t2 | t2;
+t2 = {egale} t2 egale t3 |{inf} t2 inf t3 | t3 ;
+t3 = {plus} t3 plus t4 |{minus} t3 minus t4 | t4;
+t4 = {mult}t4 mult t5 |{div} t4 div t5 | t5 ;
+t5 = {non} non t5 | {nombre} nombre | {identif} identif;
+
+iaff = {identif} identif egale  exp;
+isi = {si}  si exp {alors} alors  ib | {si}  si exp {alors} alors  ib  {sinon} sinon ib ;
+itq =  {tantque } tantque exp {faire} faire ib ;
+iretour= {retour} retour exp ;
+iappel = {appel} appel ;
+iecrire = {ecrire} ecrire {parenthese_ouvrante} parenthese_ouvrante exp {parenthese_fermante} parenthese_fermante;
+ib = {open} open exp {close} close ;
+
+
+
+
+
+
 programme =
 {prog1} parenthese_ouvrante identif virgule nombre parenthese_fermante |
 {prog2} parenthese_ouvrante nombre parenthese_fermante ;
+
+
+
