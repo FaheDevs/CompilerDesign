@@ -27,15 +27,18 @@ div = '/';
 mult = '*';
 non = '!';
 si = 'si';
-alors = 'alors ';
+alors = 'alors';
 sinon = 'sinon';
 tantque= 'tantque';
 faire = 'faire';
 retour ='retour';
 appel = 'appel';
-ecrire ='ecrire';
 open = '{';
 close = '}';
+lire = 'lire';
+ecrire ='ecrire';
+pointv = ';';
+
 Ignored Tokens
 
 espaces, commentaire;
@@ -49,14 +52,22 @@ t3 = {plus} t3 plus t4 |{minus} t3 minus t4 | t4;
 t4 = {mult}t4 mult t5 |{div} t4 div t5 | t5 ;
 t5 = {non} non t5 | {nombre} nombre | {identif} identif;
 
-iaff = {identif} identif egale  exp;
-isi = {si}  si exp {alors} alors  ib | {si}  si exp {alors} alors  ib  {sinon} sinon ib ;
-itq =  {tantque } tantque exp {faire} faire ib ;
-iretour= {retour} retour exp ;
-iappel = {appel} appel ;
-iecrire = {ecrire} ecrire {parenthese_ouvrante} parenthese_ouvrante exp {parenthese_fermante} parenthese_fermante;
-ib = {open} open exp {close} close ;
+iaff = {iaff} identif egale  exp;
 
+isi = {isi} si exp alors ib | {isinon} isi sinon ib ;
+
+itq =  {itantque} tantque exp faire ib ;
+
+iretour = {iretour} retour exp ;
+
+iappel = {iappel} appel;
+
+ilire = {ilire} identif egale lire;
+iecrire = {iecrire} ecrire parenthese_ouvrante exp parenthese_fermante;
+
+ib = {ib} open lins close;
+lins = {lins} ins lins | {vide};
+ins = {insexp} exp pointv | {insaff} iaff pointv | {inssi} isi pointv | {instq} itq pointv | {insretour} iretour pointv | {insappel} iappel pointv | {insecrire} iecrire pointv | {inslire} ilire pointv;
 
 
 
