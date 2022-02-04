@@ -287,6 +287,116 @@ public class Sc2sa extends DepthFirstAdapter {
         outAIdentifT5(node);
     }
 
+    @Override
+    public void caseAIappelT5(AIappelT5 node) {
+        SaAppel appel = null;
+        inAIappelT5(node);
+        if(node.getIappelfonction() != null) {
+            node.getIappelfonction().apply(this);
+
+        }
+        appel = (SaAppel) this.returnValue;
+        outAIappelT5(node);
+        this.returnValue = new SaExpAppel(appel);
+    }
+
+    @Override
+    public void caseAParT5(AParT5 node) {
+        SaExp exp = null;
+        inAParT5(node);
+        if(node.getParentheseOuvrante() != null) {
+            node.getParentheseOuvrante().apply(this);
+        }
+        if(node.getExp() != null) {
+            node.getExp().apply(this);
+        }
+        if(node.getParentheseFermante() != null) {
+            node.getParentheseFermante().apply(this);
+        }
+        this.returnValue = exp;
+        outAParT5(node);
+    }
+
+    @Override
+    public void caseAIaffIaff(AIaffIaff node) {
+        inAIaffIaff(node);
+        if(node.getIdentif() != null) {
+            node.getIdentif().apply(this);
+        }
+        if(node.getEgale() != null) {
+            node.getEgale().apply(this);
+        }
+        if(node.getExp() != null) {
+            node.getExp().apply(this);
+        }
+        outAIaffIaff(node);
+    }
+
+    @Override
+    public void caseAIsiIsi (AIsiIsi node){
+        inAIsiIsi(node);
+        if (node.getSi() != null){
+            node.getSi().apply(this);
+        }
+        if (node.getExp() != null){
+            node.getExp().apply(this);
+        }
+        if (node.getAlors() != null) {
+            node.getAlors().apply(this);
+        }
+        if (node.getIb() != null){
+            node.getIb().apply(this);
+        }
+        outAIsiIsi(node);
+    }
+
+    @Override
+    public void caseAIsinonIsi (AIsinonIsi node){
+        inAIsinonIsi(node);
+        if (node.getIsi() != null){
+            node.getIsi().apply(this);
+        }
+        if (node.getSinon() != null){
+            node.getSinon().apply(this);
+        }
+        if (node.getIb() != null) {
+            node.getIb().apply(this);
+        }
+        outAIsinonIsi(node);
+    }
+
+    @Override
+    public void caseAItantqueItq (AItantqueItq node){
+        inAItantqueItq(node);
+        if (node.getTantque() != null){
+            node.getTantque().apply(this);
+        }
+        if (node.getExp() != null){
+            node.getExp().apply(this);
+        }
+        if (node.getFaire() != null) {
+            node.getFaire().apply(this);
+        }
+        if (node.getIb() != null) {
+            node.getIb().apply(this);
+        }
+        outAItantqueItq(node);
+    }
+    @Override
+    public void caseAIretourIretour (AIretourIretour node){
+        inAIretourIretour(node);
+        if (node.getRetour() != null){
+            node.getRetour().apply(this);
+        }
+        if (node.getExp() != null){
+            node.getExp().apply(this);
+        }
+        outAIretourIretour(node);
+    }
+
+
+
+
 
 
 
