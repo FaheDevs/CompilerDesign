@@ -20,7 +20,7 @@ public class Compiler
      String baseName = null;
      String inputFileName = null;
      int verboseLevel = 0;
-	
+
 	for (int i = 0; i < args.length; i++) {
 	    if(args[i].equals("-v")){
 		verboseLevel = Integer.parseInt(args[++i]);
@@ -29,27 +29,28 @@ public class Compiler
 		inputFileName = args[i];
 	    }
 	}
-	
+
 	if(inputFileName == null){
 	    System.out.println("java Compiler input_file -v verbose_level");
 	    System.exit(1);
 	}
-	
+
 	try {
 	    br = new PushbackReader(new FileReader(inputFileName));
 	    baseName = removeSuffix(inputFileName, ".l");
 	}
 	catch (IOException e) {
 	    e.printStackTrace();
-	} 
+	}
 	try {
 	    Parser p = new Parser(new Lexer(br));
 	    System.out.println("[BUILD SC] ");
 	    Start tree = p.parse();
-	    
+
 	    if(verboseLevel > 1){
 		System.out.println("[PRINT SC]");
 		tree.apply(new Sc2Xml(baseName));
+		//System.out.println(tree);
 	    }
 
 		System.out.println("[BUILD SA] ");
@@ -69,7 +70,7 @@ public class Compiler
 		System.out.println("[PRINT TS]");
 		tableGlobale.afficheTout(baseName);
 	    }
-	    
+
 	    System.out.println("[BUILD C3A] ");
 	    C3a c3a = new Sa2c3a(saRoot, tableGlobale).getC3a();
 
@@ -77,39 +78,39 @@ public class Compiler
 		System.out.println("[PRINT C3A] ");
 		c3a.affiche(baseName);
 	    }
-	    
+
 	    System.out.println("[BUILD PRE NASM] ");
 	    Nasm nasm = new C3a2nasm(c3a, tableGlobale).getNasm();
 	    if(verboseLevel > 1){
 		System.out.println("[PRINT PRE NASM] ");
 		nasm.affichePreNasm(baseName);
 	    }
-	    
+
 	    System.out.println("[BUILD FG] ");
 	    Fg fg = new Fg(nasm);
-		
+
 	    if(verboseLevel > 1){
 		System.out.println("[PRINT FG] ");
 		fg.affiche(baseName);
 	    }
-		
+
 	    System.out.println("[SOLVE FG]");
 	    FgSolution fgSolution = new FgSolution(nasm, fg);
 	    if(verboseLevel > 1){
 		System.out.println("[PRINT FG SOLUTION] ");
 		fgSolution.affiche(baseName);
-	    }	    
+	    }
 	    System.out.println("[BUILD IG] ");
 	    Ig ig = new Ig(fgSolution);
-	    
+
 	    if(verboseLevel > 1){
 		System.out.println("[PRINT IG] ");
 		ig.affiche(baseName);
 	    }
-	    
+
 	    System.out.println("[ALLOCATE REGISTERS]");
 	    ig.allocateRegisters();
-				
+
 	    System.out.println("[PRINT NASM]");
 	    nasm.afficheNasm(baseName);
 	    */
@@ -129,5 +130,5 @@ public class Compiler
 	}
 	return s;
     }
-    
+
 }
