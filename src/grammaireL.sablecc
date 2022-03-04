@@ -1,0 +1,163 @@
+Package sc;
+
+Helpers
+
+lettre = [['a' .. 'z'] + ['A' .. 'Z']];
+chiffre = ['0' .. '9'];
+alpha = [lettre + ['_' + '$']];
+alphanum = [lettre + chiffre];
+
+Tokens
+
+espaces = (' ' | 13 | 10)+;
+commentaire= '#' [[0 .. 0xffff] - [10 + 13]]* (10 | 13 | 10 13);
+virgule = ',';
+divise = '/';
+point_virgule = ';';
+mult = '*';
+minus = '-';
+parenthese_ouvrante = '(';
+parenthese_fermante = ')';
+crochet_ouvrant = '[';
+crochet_fermant = ']';
+accolade_ouvrante = '{';
+accolade_fermante = '}';
+egale = '=';
+inferieur = '<';
+et = '&';
+ou = '|';
+non = '!';
+plus = '+';
+si = 'si';
+alors = 'alors';
+sinon = 'sinon';
+tantque = 'tantque';
+faire = 'faire';
+type = 'entier';
+retour = 'retour';
+lire = 'lire';
+ecrire = 'ecrire';
+nombre = chiffre+;
+identif = alpha alphanum*;
+
+Ignored Tokens
+
+espaces, commentaire;
+
+Productions
+
+programme =
+{ldf_dvglobals} optdv ldf |
+{ldf} ldf;
+
+optdv = 
+{optdv} ldv point_virgule;
+
+ldv =
+{ldv} dv ldvsuite |
+{dv} dv;
+
+ldvsuite =
+{suite_ldv} virgule dv ldvsuite|
+{suite_dv} virgule dv ;
+
+dv =
+{var} type identif |
+{tableau} type identif crochet_ouvrant nombre crochet_fermant ;
+
+ldf =
+{ldf} df ldf |
+{ldf_vide} ;
+
+df =
+{df} identif lparam optdv instbloc |
+{df_sansvariables} identif lparam instbloc ;
+
+lparam =
+{sans} parenthese_ouvrante parenthese_fermante |
+{avec} parenthese_ouvrante ldv parenthese_fermante ;
+
+inst =
+{instaffect} instaffect |
+{instbloc } instbloc |
+{instsi } instsi |
+{insttantque } insttantque |
+{instappel } instappel |
+{instretour } instretour |
+{instecriture } instecriture |
+{instvide} instvide ;
+
+instaffect = var egale exp point_virgule ;
+
+instbloc = accolade_ouvrante linst accolade_fermante ;
+
+
+linst =
+{linst} inst linst |
+{linstvide} ;
+
+instsi =
+{sinon} si exp alors instbloc instsinon |
+{si} si exp alors instbloc ;
+
+instsinon = sinon instbloc ;
+
+insttantque = tantque exp faire instbloc ;
+
+instappel = appelf point_virgule ;
+
+instretour = retour exp point_virgule ;
+
+instecriture = ecrire parenthese_ouvrante exp parenthese_fermante point_virgule ;
+
+instvide = point_virgule ;
+
+
+exp =
+{ou} exp ou t1 |
+{t1} t1;
+
+t1 =
+{et} t1 et t2 |
+{t2} t2;
+
+t2 =
+{inf} t2 inferieur t3 |
+{egale} t2 egale t3 |
+{t3} t3;
+
+t3 =
+{plus} t3 plus t4 |
+{minus} t3 minus t4 |
+{t4} t4 ;
+
+t4 =
+{mult} t4 mult t5 |
+{divise} t4 divise t5 |
+{t5} t5 ;
+
+t5 =
+{non} non t5 |
+{t6} t6 ;
+
+t6 =
+ {nombre} nombre |
+ {appelf} appelf |
+ {var} var |
+ {par} parenthese_ouvrante exp parenthese_fermante |
+ {lire} lire parenthese_ouvrante parenthese_fermante ;
+
+
+var =
+{tab} identif crochet_ouvrant exp crochet_fermant |
+{var} identif ;
+
+lexp =
+{lexp} exp lexp_suite|
+{vide} ;
+
+lexp_suite =
+{lsuite} virgule exp lexp_suite |
+{vide} ;
+
+appelf = identif parenthese_ouvrante lexp parenthese_fermante ;
