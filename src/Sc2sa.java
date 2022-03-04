@@ -140,7 +140,6 @@ public class Sc2sa extends DepthFirstAdapter {
         if (node.getIdentif() != null){
             node.getIdentif().apply(this);
             id = node.getIdentif().getText();
-            System.out.println("h");
         }
         if (node.getCrochetOuvrant() != null){
             node.getCrochetOuvrant().apply(this);
