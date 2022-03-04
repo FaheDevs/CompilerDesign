@@ -2,6 +2,9 @@ package ts;
 
 import sa.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Sa2ts extends SaDepthFirstVisitor<Void> {
     enum Context {LOCAL, GLOBAL, PARAM;
         public boolean isGlobal(){return this == GLOBAL;}
@@ -12,6 +15,28 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
     private Ts tableGlobale;
     private Ts tableLocaleCourante;
     private Context context;
+    private List<String> addParam(SaLDec param){
+        List<String> parametres = new ArrayList<>();
+        SaLDec p = param;
+        while (p != null) {
+            //System.out.println(tableLocaleCourante.variables.get(p.getTete().getNom()));
+            parametres.add(p.getTete().getNom());
+            //isInParam = tableLocaleCourante.variables.containsKey(p.getTete().getNom());
+            p = p.getQueue();
+        }
+        return parametres;
+    }
+    private boolean isInParam(SaLDec var, List<String> parametres){
+        boolean isInParam = false;
+        SaLDec v = var;
+        while (v != null && isInParam == false) {
+            //System.out.println(tableLocaleCourante.variables.get(p.getTete().getNom()));
+            isInParam = parametres.contains(v.getTete().getNom());
+            //isInParam = tableLocaleCourante.variables.containsKey(p.getTete().getNom());
+            v = v.getQueue();
+        }
+        return isInParam;
+    }
 //Créaion de la table des symboles
     public Sa2ts(SaNode racine){
         tableGlobale = new Ts();
@@ -45,7 +70,9 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
             System.exit(1);
         }
         else if(context.isParam()) node.tsItem = Tablecourante.addParam(identif);
-        else node.tsItem = Tablecourante.addVar(identif, 1);
+        else {
+            node.tsItem = Tablecourante.addVar(identif, 1);
+        }
 
         defaultOut(node);
         return null;
@@ -76,18 +103,30 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
     public Void visit(SaVarSimple node) {
         String identif = node.getNom();
         defaultIn(node);
-        if(context== Context.LOCAL || context== Context.PARAM){
-            if(tableLocaleCourante.getVar(identif) == null ) {
+        /*if(context == Context.LOCAL || context == Context.PARAM){
+            if(tableLocaleCourante.getVar(identif) == null) {
+                System.out.println("dz");
                 System.err.println("la variable référencée n'existe pas");
                 System.exit(1);
             }
+        }*/;
+        System.out.println(tableGlobale.getVar(identif) == null);
+        if(context == Context.GLOBAL && tableGlobale.getVar(identif) == null){
+            System.err.println("la variable référencée n'existe pas");
+            System.exit(1);
         }
-        if (context == Context.GLOBAL) {
+        System.out.println(tableLocaleCourante.getVar(identif) == null);
+        if((context == Context.LOCAL || context == Context.PARAM) && (tableLocaleCourante.getVar(identif) == null && tableGlobale.getVar(identif) == null)) {
+            System.out.println("dz");
+            System.err.println("la variable référencée n'existe pas");
+            System.exit(1);
+        }
+        /*if (context == Context.GLOBAL) {
             if(tableGlobale.getVar(identif) == null){
                 System.err.println("la variable référencée n'existe pas");
                 System.exit(1);
             }
-        }
+        }*/
 
         defaultOut(node);
         return null;
@@ -111,6 +150,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
 // Déclaration de fonctions
     public Void visit(SaDecFonc node) {
         String ideontifFonction = node.getNom();
+        List<String> lp = new ArrayList<>();
         defaultIn(node);
         if (tableGlobale.getFct(ideontifFonction) != null){
             System.err.println("il existe une fonction du meme nom");
@@ -121,13 +161,24 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         if (node.getParametres() == null) nbArgs = 0;
         else nbArgs = node.getParametres().length();
         tableGlobale.addFct(ideontifFonction, nbArgs, tableLocaleCourante, node);
-
         context = Context.PARAM;
-        if(node.getParametres()!= null) node.getParametres().accept(this);
-
+        if(node.getParametres() != null){
+            node.getParametres().accept(this);
+            lp = addParam(node.getParametres());
+        }
         context = Context.LOCAL;
-        if(node.getVariable()!=null) node.getVariable().accept(this);
-        if(node.getCorps()!=null) node.getCorps().accept(this);
+        //System.out.println(isInParam(node.getVariable(), lp));
+        if(node.getVariable() != null && !isInParam(node.getVariable(), lp)){
+            node.getVariable().accept(this);
+            System.out.println("eee");
+        }
+        else if (node.getVariable() != null && isInParam(node.getVariable(), lp)){
+            System.err.println("il existe un parametre du meme nom");
+            System.exit(1);
+        }
+        if(node.getCorps()!=null) {
+            node.getCorps().accept(this);
+        }
         context = Context.GLOBAL;
 
         defaultOut(node);
@@ -136,13 +187,37 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
 // Appele de fonctions
     public Void visit(SaAppel node) {
         String idontifFonction = node.getNom();
+        Integer nbArguments = null;
+        Integer nbParametres = 0;
+        if (node.getArguments() == null){
+            nbArguments = 0;
+        }
+        if (tableGlobale.getFct(idontifFonction) != null && (Integer)tableGlobale.getFct(idontifFonction).nbArgs == null){
+            nbParametres = 0;
+        }
+        else if (node.getArguments() != null){
+            nbArguments = (Integer)node.getArguments().length();
+        }
+        else if (tableGlobale.getFct(idontifFonction) != null && (Integer)tableGlobale.getFct(idontifFonction).nbArgs != null){
+            nbParametres = (Integer)tableGlobale.getFct(idontifFonction).nbArgs;
+        }
         defaultIn(node);
         if(tableGlobale.getFct(idontifFonction) == null){
             System.err.println("la fonction appelée n'existe pas");
             System.exit(1);
         }
-        if(node.getArguments() != null) node.getArguments().accept(this);
 
+        if(node.getArguments() != null && (nbParametres == nbArguments)){
+            System.out.println("n n");
+            node.getArguments().accept(this);
+        }
+        if(node.getArguments() == null && (nbParametres == nbArguments)){
+            //node.getArguments().accept(this);
+        }
+        else {
+            System.err.println("Le nombre des arguments incopatible.");
+            System.exit(1);
+        }
         defaultOut(node);
         return null;
     }
