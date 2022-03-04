@@ -149,10 +149,10 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
     }
 // Déclaration de fonctions
     public Void visit(SaDecFonc node) {
-        String ideontifFonction = node.getNom();
+        String identifFonction = node.getNom();
         List<String> lp = new ArrayList<>();
         defaultIn(node);
-        if (tableGlobale.getFct(ideontifFonction) != null){
+        if (tableGlobale.getFct(identifFonction) != null){
             System.err.println("il existe une fonction du meme nom");
             System.exit(1);
         }
@@ -160,7 +160,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         int nbArgs;
         if (node.getParametres() == null) nbArgs = 0;
         else nbArgs = node.getParametres().length();
-        tableGlobale.addFct(ideontifFonction, nbArgs, tableLocaleCourante, node);
+        tableGlobale.addFct(identifFonction, nbArgs, tableLocaleCourante, node);
         context = Context.PARAM;
         if(node.getParametres() != null){
             node.getParametres().accept(this);
@@ -186,35 +186,28 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
 }
 // Appele de fonctions
     public Void visit(SaAppel node) {
-        String idontifFonction = node.getNom();
+        String identifFonction = node.getNom();
         Integer nbArguments = null;
-        Integer nbParametres = 0;
         if (node.getArguments() == null){
             nbArguments = 0;
-        }
-        if (tableGlobale.getFct(idontifFonction) != null && (Integer)tableGlobale.getFct(idontifFonction).nbArgs == null){
-            nbParametres = 0;
         }
         else if (node.getArguments() != null){
             nbArguments = (Integer)node.getArguments().length();
         }
-        else if (tableGlobale.getFct(idontifFonction) != null && (Integer)tableGlobale.getFct(idontifFonction).nbArgs != null){
-            nbParametres = (Integer)tableGlobale.getFct(idontifFonction).nbArgs;
-        }
         defaultIn(node);
-        if(tableGlobale.getFct(idontifFonction) == null){
+        if(tableGlobale.getFct(identifFonction) == null){
             System.err.println("la fonction appelée n'existe pas");
             System.exit(1);
         }
 
-        if(node.getArguments() != null && (nbParametres == nbArguments)){
+        if(node.getArguments() != null && (tableGlobale.getFct(identifFonction).getNbArgs() == nbArguments)){
             System.out.println("n n");
             node.getArguments().accept(this);
         }
-        if(node.getArguments() == null && (nbParametres == nbArguments)){
+        if(node.getArguments() == null && (tableGlobale.getFct(identifFonction).getNbArgs() == nbArguments)){
             //node.getArguments().accept(this);
         }
-        else {
+        else if (tableGlobale.getFct(identifFonction).getNbArgs() != nbArguments){
             System.err.println("Le nombre des arguments incopatible.");
             System.exit(1);
         }
