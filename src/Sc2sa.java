@@ -26,7 +26,7 @@ public class Sc2sa extends DepthFirstAdapter {
 
     @Override
     public void caseALdfDvglobalsProgramme(ALdfDvglobalsProgramme node){
-        SaLDec var= null;
+        SaLDec var = null;
         SaLDec function = null ;
         inALdfDvglobalsProgramme(node);
         if(node.getOptdv() != null) {
@@ -56,8 +56,8 @@ public class Sc2sa extends DepthFirstAdapter {
 
     @Override
     public void caseALdvLdv(ALdvLdv node){
-        SaDec head =null;
-        SaLDec queue=null;
+        SaDec head = null;
+        SaLDec queue = null;
         inALdvLdv(node);
         if (node.getDv() != null){
             node.getDv().apply(this);
@@ -73,7 +73,7 @@ public class Sc2sa extends DepthFirstAdapter {
 
     @Override
     public void caseADvLdv(ADvLdv node){
-        SaDec dvar =null;
+        SaDec dvar = null;
         inADvLdv(node);
         if (node.getDv() != null){
             node.getDv().apply(this);
@@ -84,8 +84,8 @@ public class Sc2sa extends DepthFirstAdapter {
     }
     @Override
     public void caseASuiteLdvLdvsuite(ASuiteLdvLdvsuite node){
-        SaDec head =null;
-        SaLDec queue=null;
+        SaDec head = null;
+        SaLDec queue = null;
         inASuiteLdvLdvsuite(node);
         if (node.getVirgule() != null){
             node.getVirgule().apply(this);
@@ -103,7 +103,7 @@ public class Sc2sa extends DepthFirstAdapter {
     }
     @Override
     public void caseASuiteDvLdvsuite(ASuiteDvLdvsuite node){
-        SaDec dvar =null;
+        SaDec dvar = null;
         inASuiteDvLdvsuite(node);
         if (node.getVirgule() != null){
             node.getVirgule().apply(this);
@@ -157,8 +157,8 @@ public class Sc2sa extends DepthFirstAdapter {
 
     @Override
     public void caseALdfLdf(ALdfLdf node){
-        SaDec head =null;
-        SaLDec queue=null;
+        SaDec head = null;
+        SaLDec queue = null;
         inALdfLdf(node);
         if (node.getDf() != null){
             node.getDf().apply(this);
@@ -180,9 +180,9 @@ public class Sc2sa extends DepthFirstAdapter {
     @Override
     public void caseADfDf(ADfDf node){
         String id = null;
-        SaLDec param=null;
-        SaLDec variables=null;
-        SaInst corps=null;
+        SaLDec param = null;
+        SaLDec variables = null;
+        SaInst corps = null;
         inADfDf(node);
         if (node.getIdentif() != null){
             node.getIdentif().apply(this);
@@ -206,8 +206,8 @@ public class Sc2sa extends DepthFirstAdapter {
     @Override
     public void caseADfSansvariablesDf(ADfSansvariablesDf node){
         String id = null;
-        SaLDec param=null;
-        SaInst corps=null;
+        SaLDec param = null;
+        SaInst corps = null;
         inADfSansvariablesDf(node);
         if (node.getIdentif() != null){
             node.getIdentif().apply(this);
@@ -256,7 +256,7 @@ public class Sc2sa extends DepthFirstAdapter {
 
     @Override
     public void caseAInstaffectInst(AInstaffectInst node){
-        SaInst ins= null;
+        SaInst ins = null;
         inAInstaffectInst(node);
         if (node.getInstaffect() != null){
             node.getInstaffect().apply(this);
@@ -267,7 +267,7 @@ public class Sc2sa extends DepthFirstAdapter {
     }
     @Override
     public void caseAInstblocInst(AInstblocInst node){
-        SaInstBloc ib= null;
+        SaInstBloc ib = null;
         inAInstblocInst(node);
         if (node.getInstbloc() != null){
             node.getInstbloc().apply(this);
@@ -666,7 +666,7 @@ public class Sc2sa extends DepthFirstAdapter {
 
     @Override
     public void caseAMinusT3(AMinusT3 node){
-        SaExp exp1 =null;
+        SaExp exp1 = null;
         SaExp exp2 = null;
         inAMinusT3(node);
         if(node.getT3() != null) {
