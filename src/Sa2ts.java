@@ -1,6 +1,5 @@
-package ts;
-
 import sa.*;
+import ts.Ts;
 
 import java.util.ArrayList;
 import java.util.List;
