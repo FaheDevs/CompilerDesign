@@ -287,9 +287,11 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
     @Override
     public C3aOperand visit(SaInstSi node) {
         /*
-        if test = 0 goto labelEnd
+        fbegin
+        si test = 0 goto labelEnd
         $labelAlors
         $labelEnd
+        fbegin
          */
         /*
         fbegin
