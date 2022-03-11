@@ -153,12 +153,14 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
     @Override
     public C3aOperand visit(SaExpAnd node) {
         /*
+        fbegin
         si op1 = 0 goto labelFalseResult
         si op2 = 0 goto labelIfResultIfFalse
         result = 1
         goto result
         labelIfResultIfFalse: result = 0
         labelResult: use result
+        fend
          */
         defaultIn(node);
         C3aTemp result = c3a.newTemp();
@@ -182,12 +184,14 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
     @Override
     public C3aOperand visit(SaExpOr node) {
         /*
+        fbegin
         si op1 != 0 goto labelTrueResult
         si op2 != 0 goto labelTrueResult
         result = 0
         goto labelResult
         labelTrueResult: result = 1
         labelResult: use result
+        fend
          */
         defaultIn(node);
         C3aTemp result = c3a.newTemp();
@@ -211,10 +215,12 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
     @Override
     public C3aOperand visit(SaExpInf node) {
         /*
+        fbegin
         result = 1
         si op1 < op2 goto labelResult
         result = 0
         labelResult: use result
+        fend
          */
         defaultIn(node);
         C3aTemp result = c3a.newTemp();
@@ -233,10 +239,12 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
     @Override
     public C3aOperand visit(SaExpEqual node) {
         /*
+        fbegin
         result = 1
         si op1 = op2 goto labelEnd
         result = 0
         labelEnd: use result
+        fend
         */
         defaultIn(node);
         C3aTemp result = c3a.newTemp();
@@ -255,10 +263,12 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
     @Override
     public C3aOperand visit(SaExpNot node) {
         /*
+        fbegin
         result = 0
         si op1 = 1 goto end
         result = 1
         end: use result
+        fend
          */
         defaultIn(node);
         C3aTemp result = c3a.newTemp();
@@ -291,7 +301,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
         si test = 0 goto labelEnd
         labelAlors
         labelEnd
-        fbegin
+        fend
          */
         /*
         fbegin
@@ -327,11 +337,13 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
     @Override
     public C3aOperand visit(SaInstTantQue node) {
         /*
+        fbegin
         test: do test
         si test = 0 goto labelEnd
         do code
         goto test
         labelEnd: next
+        fend
          */
         defaultIn(node);
         C3aLabel test = c3a.newAutoLabel();
