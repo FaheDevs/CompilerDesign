@@ -28,8 +28,8 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
         nasm.ajouteInst(new NasmSub(null, esp, new NasmConstant(4), "Allocation de quatre octets dans la pile pour stocker la valeur de retour"));
         nasm.ajouteInst(new NasmCall(null, new NasmLabel("main"), ""));
         nasm.ajouteInst(new NasmPop(null, eax, "Récupération de la valeur de retour"));
-        nasm.ajouteInst(new NasmMov(null, ebx, new NasmConstant(0), "programme return"));
-        nasm.ajouteInst(new NasmMov(null, eax, new NasmConstant(1), ""));
+        nasm.ajouteInst(new NasmMov(null, ebx, new NasmConstant(0), " valeur de retour du programme"));
+        nasm.ajouteInst(new NasmMov(null, eax, new NasmConstant(1), " code de sortie"));
         nasm.ajouteInst(new NasmInt(null, ""));
 
     }
@@ -83,15 +83,15 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
         ecx.colorRegister(Nasm.REG_ECX);
         NasmRegister edx = nasm.newRegister();
         edx.colorRegister(Nasm.REG_EDX);
-        nasm.ajouteInst(new NasmPush(label, ebp, "fonc : push ebp"));
-        nasm.ajouteInst(new NasmMov(null, ebp, esp, "mov ebp, esp"));
+        nasm.ajouteInst(new NasmPush(label, ebp, "sauvegarde la valeur de ebp"));
+        nasm.ajouteInst(new NasmMov(null, ebp, esp, "nouvelle valeur de ebp"));
         nasm.ajouteInst(new NasmPush(null, eax, "Sauvegarde de eax"));
         nasm.ajouteInst(new NasmPush(null, ebx, "Sauvegarde de ebx"));
         nasm.ajouteInst(new NasmPush(null, ecx, "Sauvegarde de ecx"));
         nasm.ajouteInst(new NasmPush(null, edx, "Sauvegarde de edx"));
         currentFct = inst.val;
         NasmConstant nbLocalVar = new NasmConstant(4 * currentFct.getTable().nbVar());
-        nasm.ajouteInst(new NasmSub(null, esp, nbLocalVar, "Allocation de mémoire dans la pile pour les variables locales"));
+        nasm.ajouteInst(new NasmSub(null, esp, nbLocalVar, "allocation des variables locales"));
         return null;
     }
 
@@ -212,13 +212,13 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
         NasmRegister edx = nasm.newRegister();
         edx.colorRegister(Nasm.REG_EDX);
 
-        nasm.ajouteInst(new NasmAdd(label, esp, nbLocalVar, "Désallocation de la mémoire occupée par les variables locales"));
+        nasm.ajouteInst(new NasmAdd(label, esp, nbLocalVar, "désallocation des variables locales"));
         nasm.ajouteInst(new NasmPop(null, edx, "Restaure edx"));
         nasm.ajouteInst(new NasmPop(null, ecx, "Restaure ecx"));
         nasm.ajouteInst(new NasmPop(null, ebx, "Restaure ebx"));
         nasm.ajouteInst(new NasmPop(null, eax, "Restaure eax"));
-        nasm.ajouteInst(new NasmPop(null, ebp, "Restauration de l’ancienne valeur de ebp"));
-        nasm.ajouteInst(new NasmRet(null, "Sortie de la fonction"));
+        nasm.ajouteInst(new NasmPop(null, ebp, "restaure la valeur de ebp"));
+        nasm.ajouteInst(new NasmRet(null, ""));
         return null;
     }
 
@@ -300,8 +300,8 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
 
         NasmOperand value = inst.op1.accept(this);
         //new NasmMov(label, eax, value, "");
-        nasm.ajouteInst(new NasmMov(label, eax, value, ""));
-        nasm.ajouteInst(new NasmCall(null, new NasmLabel("iprintLF"), ""));
+        nasm.ajouteInst(new NasmMov(label, eax, value, "Write 1"));
+        nasm.ajouteInst(new NasmCall(null, new NasmLabel("iprintLF"), "Write 2"));
 
         return null;
     }
