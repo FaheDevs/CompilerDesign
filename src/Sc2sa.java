@@ -40,6 +40,17 @@ public class Sc2sa extends DepthFirstAdapter {
         this.returnValue = new SaProg(var , function);
         outALdfDvglobalsProgramme(node);
     }
+    public void caseALdfProgramme(ALdfProgramme node){
+        SaLDec var = null;
+        SaLDec function = null ;
+        inALdfProgramme(node);
+        if(node.getLdf() != null) {
+            node.getLdf().apply(this);
+            function= (SaLDec) this.returnValue;
+        }
+        this.returnValue = new SaProg(var , function);
+        outALdfProgramme(node);
+    }
     public void caseAOptdvOptdv(AOptdvOptdv node) {
         SaLDec optdv = null;
         inAOptdvOptdv(node);

@@ -30,7 +30,11 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
 
     @Override
     public C3aOperand visit(SaProg node) {
+        C3aTemp temp = c3a.newTemp();
         defaultIn(node);
+        C3aFunction main = new C3aFunction(tableGlobale.getFct("main"));
+        c3a.ajouteInst(new C3aInstCall(main, temp, ""));
+        c3a.ajouteInst(new C3aInstStop(temp, ""));
         C3aOperand result = super.visit(node);
         defaultOut(node);
         return result;
@@ -59,7 +63,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
     @Override
     public C3aOperand visit(SaAppel node) {
         SaLExp arguments = node.getArguments();
-        SaExp exp = null;
+        SaExp exp;
         defaultIn(node);
         while (arguments != null){
             exp = arguments.getTete();

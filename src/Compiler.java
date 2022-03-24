@@ -1,4 +1,5 @@
 import c3a.C3a;
+import nasm.Nasm;
 import sa.Sa2Xml;
 import sa.SaNode;
 import sc.parser.*;
@@ -81,14 +82,14 @@ public class Compiler
 		System.out.println("[PRINT C3A] ");
 		c3a.affiche(baseName);
 	    }
-/*
+
 	    System.out.println("[BUILD PRE NASM] ");
 	    Nasm nasm = new C3a2nasm(c3a, tableGlobale).getNasm();
 	    if(verboseLevel > 1){
 		System.out.println("[PRINT PRE NASM] ");
 		nasm.affichePreNasm(baseName);
 	    }
-
+/*
 	    System.out.println("[BUILD FG] ");
 	    Fg fg = new Fg(nasm);
 

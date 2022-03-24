@@ -7,8 +7,8 @@ import java.util.List;
 public class Sa2ts extends SaDepthFirstVisitor<Void> {
     enum Context {LOCAL, GLOBAL, PARAM;
         public boolean isGlobal(){return this == GLOBAL;}
-        public boolean isLocal(){ return this == LOCAL;}
-        public boolean isParam(){ return this == PARAM;}
+        public boolean isLocal(){return this == LOCAL;}
+        public boolean isParam(){return this == PARAM;}
     }
 
     private Ts tableGlobale;
@@ -28,7 +28,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
     private boolean isInParam(SaLDec var, List<String> parametres){
         boolean isInParam = false;
         SaLDec v = var;
-        while (v != null && isInParam == false) {
+        while (v != null && !isInParam) {
             //System.out.println(tableLocaleCourante.variables.get(p.getTete().getNom()));
             isInParam = parametres.contains(v.getTete().getNom());
             //isInParam = tableLocaleCourante.variables.containsKey(p.getTete().getNom());
@@ -53,7 +53,23 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         return context;
     }
 
-// Déclaration de variables
+// Déclaration de variables et de Tableaux
+    // Déclaration de Tableaux
+    public Void visit(SaDecTab node) {
+        Ts Tablecourante = tableGlobale;
+        int tab_length = node.getTaille();
+        String identif = node.getNom();
+        defaultIn(node);
+        if (Tablecourante.getVar(identif) != null) {
+            System.err.println("il existe déja un tab  du même nom");
+            System.exit(1);
+        }
+        else if(context.isParam())  node.tsItem = Tablecourante.addParam(identif);
+        else node.tsItem = Tablecourante.addVar(identif,tab_length*4);
+
+        defaultOut(node);
+        return null;
+    }
     // Déclaration de variables
     public Void visit(SaDecVar node) {
         Ts Tablecourante = null;
@@ -70,29 +86,8 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         }
         else if(context.isParam()) node.tsItem = Tablecourante.addParam(identif);
         else {
-            node.tsItem = Tablecourante.addVar(identif, 1);
+            node.tsItem = Tablecourante.addVar(identif, 4);
         }
-
-        defaultOut(node);
-        return null;
-    }
-    // Déclaration de Tableaux
-    public Void visit(SaDecTab node) {
-        Ts Tablecourante = null;
-        int tab_length = node.getTaille();
-        String identif = node.getNom();
-        defaultIn(node);
-       /* if (context.isLocal()) {
-            Tablecourante = tableLocaleCourante;
-        }
-        else Tablecourante = tableGlobale;*/
-        Tablecourante = tableGlobale;
-        if (Tablecourante.getVar(identif) != null) {
-            System.err.println("il existe déja un tab  du même nom");
-            System.exit(1);
-        }
-        else if(context.isParam())  node.tsItem = Tablecourante.addParam(identif);
-        else node.tsItem = Tablecourante.addVar(identif,tab_length);
 
         defaultOut(node);
         return null;
@@ -108,7 +103,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
                 System.err.println("la variable référencée n'existe pas");
                 System.exit(1);
             }
-        }*/;
+        }*/
         System.out.println(tableGlobale.getVar(identif) == null);
         if(context == Context.GLOBAL && tableGlobale.getVar(identif) == null){
             System.err.println("la variable référencée n'existe pas");
@@ -116,7 +111,6 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         }
         System.out.println(tableLocaleCourante.getVar(identif) == null);
         if((context == Context.LOCAL || context == Context.PARAM) && (tableLocaleCourante.getVar(identif) == null && tableGlobale.getVar(identif) == null)) {
-            System.out.println("dz");
             System.err.println("la variable référencée n'existe pas");
             System.exit(1);
         }
@@ -204,7 +198,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
             node.getArguments().accept(this);
         }
         if(node.getArguments() == null && (tableGlobale.getFct(identifFonction).getNbArgs() == nbArguments)){
-            //node.getArguments().accept(this);
+           // node.getArguments().accept(this);
         }
         else if (tableGlobale.getFct(identifFonction).getNbArgs() != nbArguments){
             System.err.println("Le nombre des arguments incopatible.");
