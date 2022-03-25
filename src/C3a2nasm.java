@@ -60,11 +60,10 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
         NasmLabel label = null;
         if (inst.label != null) label = (NasmLabel) inst.label.accept(this);
 
-        nasm.ajouteInst(new NasmSub(label, esp, new NasmConstant(4), "allocation de quatre octets dans la pile pour stocker la valeur de\n" +
-                "retour"));
-        nasm.ajouteInst(new NasmCall(null, new NasmLabel(fct.identif), "appel à la fonction"));
+        nasm.ajouteInst(new NasmSub(label, esp, new NasmConstant(4), "allocation mémoire pour la valeur de retour"));
+        nasm.ajouteInst(new NasmCall(null, new NasmLabel(fct.identif), ""));
         nasm.ajouteInst(new NasmPop(null, result, "récupération de la valeur de retour"));
-        nasm.ajouteInst(new NasmAdd(null, esp, new NasmConstant(4 * fct.nbArgs), "Désallocation de l’espace occupé dans la pile par les paramètres"));
+        nasm.ajouteInst(new NasmAdd(null, esp, new NasmConstant(4 * fct.nbArgs), "désallocation des arguments"));
 
         return null;
     }
@@ -270,7 +269,7 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
 
         NasmOperand arguments = inst.op1.accept(this);
 
-        nasm.ajouteInst(new NasmPush(label, arguments, ""));
+        nasm.ajouteInst(new NasmPush(label, arguments, "Param"));
 
         return null;
     }
@@ -349,12 +348,12 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
         return new NasmAddress(new NasmLabel(var.identif));
     }
     private NasmAddress parameterAddress(TsItemVar var) {
-        int arguments = var.portee.nbArg();
+        int nbArguments = var.portee.nbArg();
         int varIndex = var.taille;
 
         NasmRegister ebp = nasm.newRegister();
         ebp.colorRegister(Nasm.REG_EAX);
-        return new NasmAddress(ebp, '+', new NasmConstant(2 + arguments - varIndex));
+        return new NasmAddress(ebp, '+', new NasmConstant( 13 * nbArguments - varIndex));
     }
     @Override
     public NasmOperand visit(C3aVar oper) {
