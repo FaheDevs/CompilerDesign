@@ -65,7 +65,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
             System.exit(1);
         }
         else if(context.isParam())  node.tsItem = tableLocaleCourante.addParam(identif);
-        else node.tsItem = Tablecourante.addVar(identif,tab_length*4);
+        else node.tsItem = Tablecourante.addVar(identif,tab_length);
 
         defaultOut(node);
         return null;
@@ -88,7 +88,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
             System.exit(1);
         }
         else{
-            node.tsItem = Tablecourante.addVar(identif, 4);
+            node.tsItem = Tablecourante.addVar(identif, 1);
         }
 
         defaultOut(node);
