@@ -25,7 +25,7 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
         ebx.colorRegister(Nasm.REG_EBX);
         NasmRegister esp = nasm.newRegister();
         esp.colorRegister(Nasm.REG_ESP);
-        nasm.ajouteInst(new NasmSub(null, esp, new NasmConstant(4), "allocation de quatre octets dans la pile pour stocker la valeur de retour"));
+        nasm.ajouteInst(new NasmSub(null, esp, new NasmConstant(4), "allocation mémoire pour la valeur de retour"));
         nasm.ajouteInst(new NasmCall(null, new NasmLabel("main"), ""));
         nasm.ajouteInst(new NasmPop(null, eax, "récupération de la valeur de retour"));
         nasm.ajouteInst(new NasmMov(null, ebx, new NasmConstant(0), " valeur de retour du programme"));
