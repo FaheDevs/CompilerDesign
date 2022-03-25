@@ -65,7 +65,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
             System.exit(1);
         }
         else if(context.isParam())  node.tsItem = tableLocaleCourante.addParam(identif);
-        else node.tsItem = Tablecourante.addVar(identif,tab_length);
+        else node.tsItem = Tablecourante.addVar(identif,tab_length*4);
 
         defaultOut(node);
         return null;
@@ -88,7 +88,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
             System.exit(1);
         }
         else{
-            node.tsItem = Tablecourante.addVar(identif, 1);
+            node.tsItem = Tablecourante.addVar(identif, 4);
         }
 
         defaultOut(node);
@@ -196,11 +196,10 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         }
 
         if(node.getArguments() != null && (tableGlobale.getFct(identifFonction).getNbArgs() == nbArguments)){
-            System.out.println("n n");
             node.getArguments().accept(this);
         }
-        if(node.getArguments() == null && (tableGlobale.getFct(identifFonction).getNbArgs() == nbArguments)){
-           // node.getArguments().accept(this);
+        if(node.getArguments() != null && (tableGlobale.getFct(identifFonction).getNbArgs() == nbArguments)){
+            node.getArguments().accept(this);
         }
         else if (tableGlobale.getFct(identifFonction).getNbArgs() != nbArguments){
             System.err.println("Le nombre des arguments incopatible.");

@@ -35,7 +35,7 @@ public class Ts
 
     public TsItemVar addParam(String identif)
     {
-	TsItemVar item = new TsItemVar(identif, 1);
+	TsItemVar item = new TsItemVar(identif, 4);
 	item.portee = this;
 	item.adresse = this.adrArgCourant;
 	item.isParam = true;

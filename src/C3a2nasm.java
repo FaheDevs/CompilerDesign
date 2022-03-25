@@ -330,7 +330,7 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
 
     private NasmAddress variableAddress(TsItemVar var, C3aOperand index) {
         boolean isLocal = currentFct.getTable().variables.containsKey(var.identif);
-        int varIndex = var.taille;
+        int varIndex = var.adresse;
         if (isLocal) {
             NasmRegister ebp = nasm.newRegister();
             ebp.colorRegister(Nasm.REG_EBP);
@@ -349,11 +349,11 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
     }
     private NasmAddress parameterAddress(TsItemVar var) {
         int nbArguments = var.portee.nbArg();
-        int varIndex = var.taille;
+        int varIndex = var.adresse;
 
         NasmRegister ebp = nasm.newRegister();
-        ebp.colorRegister(Nasm.REG_EAX);
-        return new NasmAddress(ebp, '+', new NasmConstant( 13 * nbArguments - varIndex));
+        ebp.colorRegister(Nasm.REG_EBP);
+        return new NasmAddress(ebp, '+', new NasmConstant( 8 + 4 * nbArguments - varIndex));
     }
     @Override
     public NasmOperand visit(C3aVar oper) {
