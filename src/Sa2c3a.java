@@ -106,7 +106,6 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
         defaultIn(node);
         TsItemVar var = tableGlobale.getVar(node.getNom());
         C3aOperand indice = node.getIndice().accept(this);
-        // TODO: instanceof Constant
         C3aOperand result = new C3aVar(var, indice);
         defaultOut(node);
         return result;
@@ -280,9 +279,9 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
         C3aOperand vrai = new C3aConstant(1);
         C3aOperand faux = new C3aConstant(0);
         C3aOperand op1 = node.getOp1().accept(this);
-        c3a.ajouteInst(new C3aInstAffect(faux, result, ""));
-        c3a.ajouteInst(new C3aInstJumpIfEqual(op1, vrai, labelEnd, ""));
         c3a.ajouteInst(new C3aInstAffect(vrai, result, ""));
+        c3a.ajouteInst(new C3aInstJumpIfEqual(op1, faux, labelEnd, ""));
+        c3a.ajouteInst(new C3aInstAffect(faux, result, ""));
         c3a.addLabelToNextInst(labelEnd);
         defaultOut(node);
         return result;
