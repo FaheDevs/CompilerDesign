@@ -230,8 +230,8 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
         NasmOperand op2 = inst.op2.accept(this);
         NasmOperand to = inst.result.accept(this);
 
-        nasm.ajouteInst(new NasmCmp(label, op1, op2, ""));
-        nasm.ajouteInst(new NasmJe(null, to, ""));
+        nasm.ajouteInst(new NasmCmp(label, op1, op2, "JumpIfEqual 1"));
+        nasm.ajouteInst(new NasmJe(null, to, "JumpIfEqual 2"));
 
         return null;
     }
@@ -244,8 +244,8 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
         NasmOperand op2 = inst.op2.accept(this);
         NasmOperand to = inst.result.accept(this);
 
-        nasm.ajouteInst(new NasmCmp(label, op1, op2, ""));
-        nasm.ajouteInst(new NasmJne(null, to, ""));
+        nasm.ajouteInst(new NasmCmp(label, op1, op2, "jumpIfNotEqual 1"));
+        nasm.ajouteInst(new NasmJne(null, to, "jumpIfNotEqual 2"));
 
         return null;
     }
