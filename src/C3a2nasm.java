@@ -19,19 +19,20 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
     }
 
     private void prelude() {
+        NasmRegister esp = nasm.newRegister();
+        esp.colorRegister(Nasm.REG_ESP);
         NasmRegister eax = nasm.newRegister();
         eax.colorRegister(Nasm.REG_EAX);
         NasmRegister ebx = nasm.newRegister();
         ebx.colorRegister(Nasm.REG_EBX);
-        NasmRegister esp = nasm.newRegister();
-        esp.colorRegister(Nasm.REG_ESP);
+        nasm.setTempCounter(0);
+        NasmRegister t = nasm.newRegister();
         nasm.ajouteInst(new NasmSub(null, esp, new NasmConstant(4), "allocation mémoire pour la valeur de retour"));
         nasm.ajouteInst(new NasmCall(null, new NasmLabel("main"), ""));
-        nasm.ajouteInst(new NasmPop(null, eax, "récupération de la valeur de retour"));
+        nasm.ajouteInst(new NasmPop(null, t, "récupération de la valeur de retour"));
         nasm.ajouteInst(new NasmMov(null, ebx, new NasmConstant(0), " valeur de retour du programme"));
         nasm.ajouteInst(new NasmMov(null, eax, new NasmConstant(1), " code de sortie"));
         nasm.ajouteInst(new NasmInt(null, ""));
-
     }
 
     @Override
@@ -308,6 +309,8 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
 
     @Override
     public NasmOperand visit(C3aInstStop inst) {
+        NasmLabel op = null;
+        if (inst.label != null) op = (NasmLabel)inst.label.accept(this);
         return null;
     }
 
