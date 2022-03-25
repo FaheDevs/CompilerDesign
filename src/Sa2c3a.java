@@ -44,7 +44,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
     public C3aOperand visit(SaDecFonc node) {
         TsItemFct fonction = tableGlobale.getFct(node.getNom());
         defaultIn(node);
-        c3a.ajouteInst(new C3aInstFBegin(fonction, "fbegin"));
+        c3a.ajouteInst(new C3aInstFBegin(fonction, "entree fonction"));
         tableLocaleCourante = tableGlobale.getTableLocale(node.getNom());
         super.visit(node);
         tableLocaleCourante = null;
