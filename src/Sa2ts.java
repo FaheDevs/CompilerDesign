@@ -64,7 +64,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
             System.err.println("il existe déja un tab  du même nom");
             System.exit(1);
         }
-        else if(context.isParam())  node.tsItem = Tablecourante.addParam(identif);
+        else if(context.isParam())  node.tsItem = tableLocaleCourante.addParam(identif);
         else node.tsItem = Tablecourante.addVar(identif,tab_length*4);
 
         defaultOut(node);
@@ -80,12 +80,14 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         }
         else Tablecourante = tableGlobale;
 
-        if (Tablecourante.getVar(identif) != null) {
+        if (Tablecourante.getVar(identif) == null && context.isParam()) {
+            node.tsItem = tableLocaleCourante.addParam(identif);
+        }
+        else if (Tablecourante.getVar(identif) != null){
             System.err.println("il ya une variable du même nom");
             System.exit(1);
         }
-        else if(context.isParam()) node.tsItem = Tablecourante.addParam(identif);
-        else {
+        else{
             node.tsItem = Tablecourante.addVar(identif, 4);
         }
 
