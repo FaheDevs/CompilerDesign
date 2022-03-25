@@ -164,7 +164,7 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
         NasmOperand result = inst.result.accept(this);
         NasmOperand value = inst.op1.accept(this);
 
-        nasm.ajouteInst(new NasmMov(label, result, value, "Affecter"));
+        nasm.ajouteInst(new NasmMov(label, result, value, "Affect"));
 
         return null;
     }
