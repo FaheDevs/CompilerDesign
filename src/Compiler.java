@@ -1,4 +1,6 @@
 import c3a.C3a;
+import fg.Fg;
+import fg.FgSolution;
 import nasm.Nasm;
 import sa.Sa2Xml;
 import sa.SaNode;
@@ -89,7 +91,7 @@ public class Compiler
 		System.out.println("[PRINT PRE NASM] ");
 		nasm.affichePreNasm(baseName);
 	    }
-/*
+
 	    System.out.println("[BUILD FG] ");
 	    Fg fg = new Fg(nasm);
 
@@ -104,7 +106,7 @@ public class Compiler
 		System.out.println("[PRINT FG SOLUTION] ");
 		fgSolution.affiche(baseName);
 	    }
-	    System.out.println("[BUILD IG] ");
+	   /* System.out.println("[BUILD IG] ");
 	    Ig ig = new Ig(fgSolution);
 
 	    if(verboseLevel > 1){
