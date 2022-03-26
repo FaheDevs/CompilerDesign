@@ -284,7 +284,7 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
         NasmRegister ebp = nasm.newRegister();
         ebp.colorRegister(Nasm.REG_EBP);
 
-        NasmAddress destination = new NasmAddress(ebp, '+', new NasmConstant(2));
+        NasmAddress destination = new NasmAddress(ebp, '+', new NasmConstant(8));
 
         nasm.ajouteInst(new NasmMov(label, destination, source, "ecriture de la valeur de retour"));
         return null;
@@ -342,7 +342,6 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
             NasmConstant sp = new NasmConstant(4);
             nasm.ajouteInst(new NasmMov(null, t, operIndex, ""));
             nasm.ajouteInst(new NasmMul(null, t, sp, ""));
-            System.out.println(t.val + "--" +var.identif);
             return new NasmAddress(new NasmLabel(var.getIdentif()), '+', t);
         }
         return new NasmAddress(new NasmLabel(var.identif));
@@ -350,10 +349,10 @@ public class C3a2nasm implements C3aVisitor<NasmOperand> {
     private NasmAddress parameterAddress(TsItemVar var) {
         int nbArguments = var.portee.nbArg();
         int varIndex = var.adresse;
-
+        System.out.println(nbArguments);
         NasmRegister ebp = nasm.newRegister();
         ebp.colorRegister(Nasm.REG_EBP);
-        return new NasmAddress(ebp, '+', new NasmConstant( 8 + 4 * nbArguments - varIndex));
+        return new NasmAddress(ebp, '+', new NasmConstant( 8 + nbArguments - varIndex));
     }
     @Override
     public NasmOperand visit(C3aVar oper) {

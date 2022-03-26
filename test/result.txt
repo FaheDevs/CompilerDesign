@@ -257,93 +257,93 @@
 	varloc4.saout         INCORRECT
 	varloc5.saout         INCORRECT
 Évaluation de Diff de c3a :
-67/84 correct ( 79.76%)
-	add1.c3a           CORRECT
-	add2.c3a           CORRECT
-	affect1.c3a        CORRECT
-	affect2.c3a        CORRECT
-	affect3.c3a        CORRECT
-	and1.c3a           CORRECT
-	and2.c3a           CORRECT
-	and3.c3a           CORRECT
-	and4.c3a           CORRECT
-	and5.c3a           CORRECT
-	appel-param1.c3a   CORRECT
-	appel-param2.c3a   CORRECT
-	appel-param3.c3a   CORRECT
-	appel1.c3a         CORRECT
-	appel2.c3a         CORRECT
-	appel3.c3a         CORRECT
-	div1.c3a           CORRECT
-	div2.c3a           CORRECT
-	div3.c3a           CORRECT
-	div4.c3a           CORRECT
-	ecrire1.c3a        CORRECT
-	ecrire2.c3a        CORRECT
-	egal1.c3a          CORRECT
-	egal2.c3a          CORRECT
-	egal3.c3a          CORRECT
-	inf1.c3a           CORRECT
-	inf2.c3a           CORRECT
-	inf3.c3a           CORRECT
-	inf4.c3a           CORRECT
-	mult1.c3a          CORRECT
-	mult2.c3a          CORRECT
-	mult3.c3a          CORRECT
-	parenth1.c3a       CORRECT
-	parenth2.c3a       CORRECT
-	prio34-1.c3a       CORRECT
-	prio34-2.c3a       CORRECT
-	prio34-3.c3a       CORRECT
-	prio34-4.c3a       CORRECT
-	prio45-1.c3a       CORRECT
-	prio45-2.c3a       CORRECT
-	prio45-3.c3a       CORRECT
-	prio45-4.c3a       CORRECT
-	prio56-1.c3a       CORRECT
-	prio56-2.c3a       CORRECT
-	si1.c3a            CORRECT
-	si2.c3a            CORRECT
-	si3.c3a            CORRECT
-	si4.c3a            CORRECT
-	si5.c3a            CORRECT
-	sub1.c3a           CORRECT
-	sub2.c3a           CORRECT
-	sub3.c3a           CORRECT
-	tab1.c3a           CORRECT
-	tab2.c3a           CORRECT
-	tab3.c3a           CORRECT
-	tab4.c3a           CORRECT
-	tantque1.c3a       CORRECT
-	tantque2.c3a       CORRECT
-	varglob1.c3a       CORRECT
-	varglob2.c3a       CORRECT
-	varglob3.c3a       CORRECT
-	varglob4.c3a       CORRECT
-	varloc1.c3a        CORRECT
-	varloc2.c3a        CORRECT
-	varloc3.c3a        CORRECT
-	varloc4.c3a        CORRECT
-	varloc5.c3a        CORRECT
-	appel-retour1.c3a   INCORRECT
-	fibo.c3a            INCORRECT
-	not1.c3a            INCORRECT
-	not2.c3a            INCORRECT
-	not3.c3a            INCORRECT
-	or1.c3a             INCORRECT
-	or2.c3a             INCORRECT
-	or3.c3a             INCORRECT
-	or4.c3a             INCORRECT
-	or5.c3a             INCORRECT
-	prio23-1.c3a        INCORRECT
-	prio23-2.c3a        INCORRECT
-	prio23-3.c3a        INCORRECT
-	prio23-4.c3a        INCORRECT
-	prio67-1.c3a        INCORRECT
-	prio67-2.c3a        INCORRECT
-	rec1.c3a            INCORRECT
+82/84 correct ( 97.62%)
+	add1.c3a            CORRECT
+	add2.c3a            CORRECT
+	affect1.c3a         CORRECT
+	affect2.c3a         CORRECT
+	affect3.c3a         CORRECT
+	and1.c3a            CORRECT
+	and2.c3a            CORRECT
+	and3.c3a            CORRECT
+	and4.c3a            CORRECT
+	and5.c3a            CORRECT
+	appel-param1.c3a    CORRECT
+	appel-param2.c3a    CORRECT
+	appel-param3.c3a    CORRECT
+	appel-retour1.c3a   CORRECT
+	appel1.c3a          CORRECT
+	appel2.c3a          CORRECT
+	appel3.c3a          CORRECT
+	div1.c3a            CORRECT
+	div2.c3a            CORRECT
+	div3.c3a            CORRECT
+	div4.c3a            CORRECT
+	ecrire1.c3a         CORRECT
+	ecrire2.c3a         CORRECT
+	egal1.c3a           CORRECT
+	egal2.c3a           CORRECT
+	egal3.c3a           CORRECT
+	inf1.c3a            CORRECT
+	inf2.c3a            CORRECT
+	inf3.c3a            CORRECT
+	inf4.c3a            CORRECT
+	mult1.c3a           CORRECT
+	mult2.c3a           CORRECT
+	mult3.c3a           CORRECT
+	not1.c3a            CORRECT
+	not2.c3a            CORRECT
+	not3.c3a            CORRECT
+	or1.c3a             CORRECT
+	or2.c3a             CORRECT
+	or3.c3a             CORRECT
+	or4.c3a             CORRECT
+	or5.c3a             CORRECT
+	parenth1.c3a        CORRECT
+	parenth2.c3a        CORRECT
+	prio23-1.c3a        CORRECT
+	prio23-2.c3a        CORRECT
+	prio23-3.c3a        CORRECT
+	prio23-4.c3a        CORRECT
+	prio34-1.c3a        CORRECT
+	prio34-2.c3a        CORRECT
+	prio34-3.c3a        CORRECT
+	prio34-4.c3a        CORRECT
+	prio45-1.c3a        CORRECT
+	prio45-2.c3a        CORRECT
+	prio45-3.c3a        CORRECT
+	prio45-4.c3a        CORRECT
+	prio56-1.c3a        CORRECT
+	prio56-2.c3a        CORRECT
+	prio67-1.c3a        CORRECT
+	prio67-2.c3a        CORRECT
+	si1.c3a             CORRECT
+	si2.c3a             CORRECT
+	si3.c3a             CORRECT
+	si4.c3a             CORRECT
+	si5.c3a             CORRECT
+	sub1.c3a            CORRECT
+	sub2.c3a            CORRECT
+	sub3.c3a            CORRECT
+	tab1.c3a            CORRECT
+	tab2.c3a            CORRECT
+	tab3.c3a            CORRECT
+	tab4.c3a            CORRECT
+	tantque1.c3a        CORRECT
+	tantque2.c3a        CORRECT
+	varglob1.c3a        CORRECT
+	varglob2.c3a        CORRECT
+	varglob3.c3a        CORRECT
+	varglob4.c3a        CORRECT
+	varloc1.c3a         CORRECT
+	varloc2.c3a         CORRECT
+	varloc3.c3a         CORRECT
+	varloc4.c3a         CORRECT
+	varloc5.c3a         CORRECT
+	fibo.c3a   INCORRECT
+	rec1.c3a   INCORRECT
 Évaluation de Execution du c3a :
-81/84 correct ( 96.43%)
+84/84 correct (100.00%)
 	add1.c3aout            CORRECT
 	add2.c3aout            CORRECT
 	affect1.c3aout         CORRECT
@@ -378,15 +378,18 @@
 	mult1.c3aout           CORRECT
 	mult2.c3aout           CORRECT
 	mult3.c3aout           CORRECT
+	not1.c3aout            CORRECT
 	not2.c3aout            CORRECT
 	not3.c3aout            CORRECT
 	or1.c3aout             CORRECT
 	or2.c3aout             CORRECT
+	or3.c3aout             CORRECT
 	or4.c3aout             CORRECT
 	or5.c3aout             CORRECT
 	parenth1.c3aout        CORRECT
 	parenth2.c3aout        CORRECT
 	prio23-1.c3aout        CORRECT
+	prio23-2.c3aout        CORRECT
 	prio23-3.c3aout        CORRECT
 	prio23-4.c3aout        CORRECT
 	prio34-1.c3aout        CORRECT
@@ -425,41 +428,41 @@
 	varloc3.c3aout         CORRECT
 	varloc4.c3aout         CORRECT
 	varloc5.c3aout         CORRECT
-	not1.c3aout       INCORRECT
-	or3.c3aout        INCORRECT
-	prio23-2.c3aout   INCORRECT
 Évaluation de Diff de pre-nasm :
-20/84 correct ( 23.81%)
-	add1.pre-nasm       CORRECT
-	add2.pre-nasm       CORRECT
-	affect1.pre-nasm    CORRECT
-	ecrire1.pre-nasm    CORRECT
-	ecrire2.pre-nasm    CORRECT
-	mult1.pre-nasm      CORRECT
-	mult2.pre-nasm      CORRECT
-	mult3.pre-nasm      CORRECT
-	parenth1.pre-nasm   CORRECT
-	parenth2.pre-nasm   CORRECT
-	prio34-1.pre-nasm   CORRECT
-	prio34-2.pre-nasm   CORRECT
-	sub1.pre-nasm       CORRECT
-	sub2.pre-nasm       CORRECT
-	sub3.pre-nasm       CORRECT
-	tab1.pre-nasm       CORRECT
-	varglob1.pre-nasm   CORRECT
-	varglob2.pre-nasm   CORRECT
-	varglob3.pre-nasm   CORRECT
-	varglob4.pre-nasm   CORRECT
+27/84 correct ( 32.14%)
+	add1.pre-nasm           CORRECT
+	add2.pre-nasm           CORRECT
+	affect1.pre-nasm        CORRECT
+	affect3.pre-nasm        CORRECT
+	appel-param1.pre-nasm   CORRECT
+	appel-param2.pre-nasm   CORRECT
+	appel-param3.pre-nasm   CORRECT
+	ecrire1.pre-nasm        CORRECT
+	ecrire2.pre-nasm        CORRECT
+	mult1.pre-nasm          CORRECT
+	mult2.pre-nasm          CORRECT
+	mult3.pre-nasm          CORRECT
+	parenth1.pre-nasm       CORRECT
+	parenth2.pre-nasm       CORRECT
+	prio34-1.pre-nasm       CORRECT
+	prio34-2.pre-nasm       CORRECT
+	prio45-2.pre-nasm       CORRECT
+	si1.pre-nasm            CORRECT
+	si5.pre-nasm            CORRECT
+	sub1.pre-nasm           CORRECT
+	sub2.pre-nasm           CORRECT
+	sub3.pre-nasm           CORRECT
+	tab1.pre-nasm           CORRECT
+	varglob1.pre-nasm       CORRECT
+	varglob2.pre-nasm       CORRECT
+	varglob3.pre-nasm       CORRECT
+	varglob4.pre-nasm       CORRECT
 	affect2.pre-nasm         INCORRECT
-	affect3.pre-nasm         INCORRECT
 	and1.pre-nasm            INCORRECT
 	and2.pre-nasm            INCORRECT
 	and3.pre-nasm            INCORRECT
 	and4.pre-nasm            INCORRECT
 	and5.pre-nasm            INCORRECT
-	appel-param1.pre-nasm    INCORRECT
-	appel-param2.pre-nasm    INCORRECT
-	appel-param3.pre-nasm    INCORRECT
 	appel-retour1.pre-nasm   INCORRECT
 	appel1.pre-nasm          INCORRECT
 	appel2.pre-nasm          INCORRECT
@@ -491,7 +494,6 @@
 	prio34-3.pre-nasm        INCORRECT
 	prio34-4.pre-nasm        INCORRECT
 	prio45-1.pre-nasm        INCORRECT
-	prio45-2.pre-nasm        INCORRECT
 	prio45-3.pre-nasm        INCORRECT
 	prio45-4.pre-nasm        INCORRECT
 	prio56-1.pre-nasm        INCORRECT
@@ -499,11 +501,9 @@
 	prio67-1.pre-nasm        INCORRECT
 	prio67-2.pre-nasm        INCORRECT
 	rec1.pre-nasm            INCORRECT
-	si1.pre-nasm             INCORRECT
 	si2.pre-nasm             INCORRECT
 	si3.pre-nasm             INCORRECT
 	si4.pre-nasm             INCORRECT
-	si5.pre-nasm             INCORRECT
 	tab2.pre-nasm            INCORRECT
 	tab3.pre-nasm            INCORRECT
 	tab4.pre-nasm            INCORRECT
@@ -515,91 +515,91 @@
 	varloc4.pre-nasm         INCORRECT
 	varloc5.pre-nasm         INCORRECT
 Évaluation de Execution du pre-nasm :
-75/84 correct ( 89.29%)
-	add1.pre-nasmout       CORRECT
-	add2.pre-nasmout       CORRECT
-	affect1.pre-nasmout    CORRECT
-	affect2.pre-nasmout    CORRECT
-	affect3.pre-nasmout    CORRECT
-	and1.pre-nasmout       CORRECT
-	and2.pre-nasmout       CORRECT
-	and3.pre-nasmout       CORRECT
-	and4.pre-nasmout       CORRECT
-	and5.pre-nasmout       CORRECT
-	appel1.pre-nasmout     CORRECT
-	appel2.pre-nasmout     CORRECT
-	appel3.pre-nasmout     CORRECT
-	div1.pre-nasmout       CORRECT
-	div2.pre-nasmout       CORRECT
-	div3.pre-nasmout       CORRECT
-	div4.pre-nasmout       CORRECT
-	ecrire1.pre-nasmout    CORRECT
-	ecrire2.pre-nasmout    CORRECT
-	egal1.pre-nasmout      CORRECT
-	egal2.pre-nasmout      CORRECT
-	egal3.pre-nasmout      CORRECT
-	inf1.pre-nasmout       CORRECT
-	inf2.pre-nasmout       CORRECT
-	inf3.pre-nasmout       CORRECT
-	inf4.pre-nasmout       CORRECT
-	mult1.pre-nasmout      CORRECT
-	mult2.pre-nasmout      CORRECT
-	mult3.pre-nasmout      CORRECT
-	not2.pre-nasmout       CORRECT
-	not3.pre-nasmout       CORRECT
-	or1.pre-nasmout        CORRECT
-	or2.pre-nasmout        CORRECT
-	or4.pre-nasmout        CORRECT
-	or5.pre-nasmout        CORRECT
-	parenth1.pre-nasmout   CORRECT
-	parenth2.pre-nasmout   CORRECT
-	prio23-1.pre-nasmout   CORRECT
-	prio23-3.pre-nasmout   CORRECT
-	prio23-4.pre-nasmout   CORRECT
-	prio34-1.pre-nasmout   CORRECT
-	prio34-2.pre-nasmout   CORRECT
-	prio34-3.pre-nasmout   CORRECT
-	prio34-4.pre-nasmout   CORRECT
-	prio45-1.pre-nasmout   CORRECT
-	prio45-2.pre-nasmout   CORRECT
-	prio45-3.pre-nasmout   CORRECT
-	prio45-4.pre-nasmout   CORRECT
-	prio56-1.pre-nasmout   CORRECT
-	prio56-2.pre-nasmout   CORRECT
-	prio67-1.pre-nasmout   CORRECT
-	prio67-2.pre-nasmout   CORRECT
-	si1.pre-nasmout        CORRECT
-	si2.pre-nasmout        CORRECT
-	si3.pre-nasmout        CORRECT
-	si4.pre-nasmout        CORRECT
-	si5.pre-nasmout        CORRECT
-	sub1.pre-nasmout       CORRECT
-	sub2.pre-nasmout       CORRECT
-	sub3.pre-nasmout       CORRECT
-	tab1.pre-nasmout       CORRECT
-	tab2.pre-nasmout       CORRECT
-	tab3.pre-nasmout       CORRECT
-	tab4.pre-nasmout       CORRECT
-	tantque1.pre-nasmout   CORRECT
-	tantque2.pre-nasmout   CORRECT
-	varglob1.pre-nasmout   CORRECT
-	varglob2.pre-nasmout   CORRECT
-	varglob3.pre-nasmout   CORRECT
-	varglob4.pre-nasmout   CORRECT
-	varloc1.pre-nasmout    CORRECT
-	varloc2.pre-nasmout    CORRECT
-	varloc3.pre-nasmout    CORRECT
-	varloc4.pre-nasmout    CORRECT
-	varloc5.pre-nasmout    CORRECT
-	appel-param1.pre-nasmout    INCORRECT
-	appel-param2.pre-nasmout    INCORRECT
-	appel-param3.pre-nasmout    INCORRECT
-	appel-retour1.pre-nasmout   INCORRECT
-	fibo.pre-nasmout            INCORRECT
-	not1.pre-nasmout            INCORRECT
-	or3.pre-nasmout             INCORRECT
-	prio23-2.pre-nasmout        INCORRECT
-	rec1.pre-nasmout            INCORRECT
+83/84 correct ( 98.81%)
+	add1.pre-nasmout            CORRECT
+	add2.pre-nasmout            CORRECT
+	affect1.pre-nasmout         CORRECT
+	affect2.pre-nasmout         CORRECT
+	affect3.pre-nasmout         CORRECT
+	and1.pre-nasmout            CORRECT
+	and2.pre-nasmout            CORRECT
+	and3.pre-nasmout            CORRECT
+	and4.pre-nasmout            CORRECT
+	and5.pre-nasmout            CORRECT
+	appel-param1.pre-nasmout    CORRECT
+	appel-param2.pre-nasmout    CORRECT
+	appel-param3.pre-nasmout    CORRECT
+	appel-retour1.pre-nasmout   CORRECT
+	appel1.pre-nasmout          CORRECT
+	appel2.pre-nasmout          CORRECT
+	appel3.pre-nasmout          CORRECT
+	div1.pre-nasmout            CORRECT
+	div2.pre-nasmout            CORRECT
+	div3.pre-nasmout            CORRECT
+	div4.pre-nasmout            CORRECT
+	ecrire1.pre-nasmout         CORRECT
+	ecrire2.pre-nasmout         CORRECT
+	egal1.pre-nasmout           CORRECT
+	egal2.pre-nasmout           CORRECT
+	egal3.pre-nasmout           CORRECT
+	inf1.pre-nasmout            CORRECT
+	inf2.pre-nasmout            CORRECT
+	inf3.pre-nasmout            CORRECT
+	inf4.pre-nasmout            CORRECT
+	mult1.pre-nasmout           CORRECT
+	mult2.pre-nasmout           CORRECT
+	mult3.pre-nasmout           CORRECT
+	not1.pre-nasmout            CORRECT
+	not2.pre-nasmout            CORRECT
+	not3.pre-nasmout            CORRECT
+	or1.pre-nasmout             CORRECT
+	or2.pre-nasmout             CORRECT
+	or3.pre-nasmout             CORRECT
+	or4.pre-nasmout             CORRECT
+	or5.pre-nasmout             CORRECT
+	parenth1.pre-nasmout        CORRECT
+	parenth2.pre-nasmout        CORRECT
+	prio23-1.pre-nasmout        CORRECT
+	prio23-2.pre-nasmout        CORRECT
+	prio23-3.pre-nasmout        CORRECT
+	prio23-4.pre-nasmout        CORRECT
+	prio34-1.pre-nasmout        CORRECT
+	prio34-2.pre-nasmout        CORRECT
+	prio34-3.pre-nasmout        CORRECT
+	prio34-4.pre-nasmout        CORRECT
+	prio45-1.pre-nasmout        CORRECT
+	prio45-2.pre-nasmout        CORRECT
+	prio45-3.pre-nasmout        CORRECT
+	prio45-4.pre-nasmout        CORRECT
+	prio56-1.pre-nasmout        CORRECT
+	prio56-2.pre-nasmout        CORRECT
+	prio67-1.pre-nasmout        CORRECT
+	prio67-2.pre-nasmout        CORRECT
+	rec1.pre-nasmout            CORRECT
+	si1.pre-nasmout             CORRECT
+	si2.pre-nasmout             CORRECT
+	si3.pre-nasmout             CORRECT
+	si4.pre-nasmout             CORRECT
+	si5.pre-nasmout             CORRECT
+	sub1.pre-nasmout            CORRECT
+	sub2.pre-nasmout            CORRECT
+	sub3.pre-nasmout            CORRECT
+	tab1.pre-nasmout            CORRECT
+	tab2.pre-nasmout            CORRECT
+	tab3.pre-nasmout            CORRECT
+	tab4.pre-nasmout            CORRECT
+	tantque1.pre-nasmout        CORRECT
+	tantque2.pre-nasmout        CORRECT
+	varglob1.pre-nasmout        CORRECT
+	varglob2.pre-nasmout        CORRECT
+	varglob3.pre-nasmout        CORRECT
+	varglob4.pre-nasmout        CORRECT
+	varloc1.pre-nasmout         CORRECT
+	varloc2.pre-nasmout         CORRECT
+	varloc3.pre-nasmout         CORRECT
+	varloc4.pre-nasmout         CORRECT
+	varloc5.pre-nasmout         CORRECT
+	fibo.pre-nasmout   INCORRECT
 Évaluation de Diff de nasm :
 0/84 correct (  0.00%)
 Évaluation de Execution du nasm :
@@ -1082,27 +1082,4 @@ ERROR evaluateSa for input varloc5.l : 'java.lang.NullPointerException: Cannot r
 	at sa.SaAppel.accept(SaAppel.java:20)
 	at sa.SaEval.<init>(SaEval.java:22)
 	at SaVM.main(SaVM.java:464)
-'
-
-ERROR evaluatePreNasm for input appel-param3.l : 'Exception in thread "main" java.lang.RuntimeException: segmentation fault
-	at nasm.Memory.readInt(Memory.java:40)
-	at nasm.NasmEval.visit(NasmEval.java:172)
-	at nasm.NasmEval.visit(NasmEval.java:14)
-	at nasm.NasmAddress.accept(NasmAddress.java:57)
-	at nasm.NasmEval.visit(NasmEval.java:349)
-	at nasm.NasmEval.visit(NasmEval.java:14)
-	at nasm.NasmMov.accept(NasmMov.java:15)
-	at nasm.NasmEval.<init>(NasmEval.java:87)
-	at NasmVM.run(NasmVM.java:28)
-	at NasmVM.main(NasmVM.java:51)
-'
-
-ERROR evaluatePreNasm for input rec1.l : 'Exception in thread "main" java.lang.RuntimeException: stack overflow
-	at nasm.Memory.pushInt(Memory.java:57)
-	at nasm.NasmEval.visit(NasmEval.java:338)
-	at nasm.NasmEval.visit(NasmEval.java:14)
-	at nasm.NasmPush.accept(NasmPush.java:13)
-	at nasm.NasmEval.<init>(NasmEval.java:87)
-	at NasmVM.run(NasmVM.java:28)
-	at NasmVM.main(NasmVM.java:51)
 '

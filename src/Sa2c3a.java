@@ -204,8 +204,8 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
         C3aOperand op2 = node.getOp2().accept(this);
         C3aConstant vrai = new C3aConstant(1);
         C3aOperand faux = new C3aConstant(0);
-        c3a.ajouteInst(new C3aInstJumpIfEqual(op1, vrai, labelTrueResult, ""));
-        c3a.ajouteInst(new C3aInstJumpIfEqual(op2, vrai, labelTrueResult, ""));
+        c3a.ajouteInst(new C3aInstJumpIfNotEqual(op1, faux, labelTrueResult, ""));
+        c3a.ajouteInst(new C3aInstJumpIfNotEqual(op2, faux, labelTrueResult, ""));
         c3a.ajouteInst(new C3aInstAffect(faux, result, ""));
         c3a.ajouteInst(new C3aInstJump(labelResult, ""));
         c3a.addLabelToNextInst(labelTrueResult);
@@ -385,6 +385,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
         defaultIn(node);
         C3aOperand op = node.getVal().accept(this);
         c3a.ajouteInst(new C3aInstReturn(op, ""));
+        c3a.ajouteInst(new C3aInstFEnd("fend"));
         defaultOut(node);
         return null;
     }
