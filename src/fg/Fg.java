@@ -37,7 +37,6 @@ public class Fg implements NasmVisitor <Void> {
 	    }
 	    
 	}
-    nasm.sectionText.forEach(this::createVertex);
     nodeArray = graph.nodeArray();
     nasm.sectionText.forEach(i -> i.accept(this));
     }
@@ -70,30 +69,16 @@ public class Fg implements NasmVisitor <Void> {
 	}
 	
     }
-    //Etape 01  Création des sommets du graphe.
-    private void createVertex(NasmInst inst) {
-        Node node = graph.newNode();
-
-        node2Inst.put(node, inst);
-        inst2Node.put(inst, node);
-
-        if (inst.label != null) {
-            String label = inst.label.toString();
-            label2Inst.put(label, inst);
-        }
-    }
     //Etape 02   Création des arcs du graphe.
     private void addEdge(NasmInst inst) {
         int instCurrent = nasm.sectionText.indexOf(inst);
         int nextInst = instCurrent + 1;
 
-        if (nextInst >= graph.nodeCount())
-            return;
-
-        Node instCurrentNode = nodeArray[instCurrent];
-        Node nextInstNode = nodeArray[nextInst];
-
-        graph.addEdge(instCurrentNode, nextInstNode);
+        if (nextInst < graph.nodeCount()) {
+            Node instCurrentNode = nodeArray[instCurrent];
+            Node nextInstNode = nodeArray[nextInst];
+            graph.addEdge(instCurrentNode, nextInstNode);
+        }
     }
     private void addEdgeToLabel(NasmInst inst) {
         int instCurrent = nasm.sectionText.indexOf(inst);
@@ -212,7 +197,10 @@ public class Fg implements NasmVisitor <Void> {
         return null;
     }
 
-    public Void visit(NasmAddress operand){return null;}
+    public Void visit(NasmAddress operand){
+
+        return null;
+    }
     public Void visit(NasmConstant operand){return null;}
     public Void visit(NasmLabel operand){return null;}
     public Void visit(NasmRegister operand){return null;}

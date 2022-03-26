@@ -115,11 +115,11 @@ public class Compiler
 	    }
 
 	    System.out.println("[ALLOCATE REGISTERS]");
-	    ig.allocateRegisters();
+	    ig.allocateRegisters();*/
 
 	    System.out.println("[PRINT NASM]");
 	    nasm.afficheNasm(baseName);
-	    */
+
 	}
 	catch(Exception e){
 	    e.printStackTrace();

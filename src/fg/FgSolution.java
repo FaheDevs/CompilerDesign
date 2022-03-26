@@ -22,6 +22,7 @@ public class FgSolution{
 	this.def = new HashMap< NasmInst, IntSet>();
 	this.in =  new HashMap< NasmInst, IntSet>();
 	this.out = new HashMap< NasmInst, IntSet>();
+	FgSolve();
     }
     
     public void affiche(String baseFileName){
@@ -47,11 +48,7 @@ public class FgSolution{
 	
     }
 
-    public void FgSolution(Nasm nasm, Fg fg)
-    {
-		this.nasm = nasm;
-		this.fg = fg;
-
+    public void FgSolve() {
 		defUseSets();
 		inOutSet();
     }
@@ -124,7 +121,7 @@ public class FgSolution{
 		while(node != null){
 			NasmInst nodeInst = fg.node2Inst.get(node.head);
 			out.union(in.get(nodeInst));
-			node = instNode.succ();
+			node = node.tail;
 		}
 		return out;
 	}
