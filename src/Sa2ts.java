@@ -72,7 +72,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
 
         defaultOut(node);
 
-        return null;
+        return super.visit(node);
     }
     // Déclaration de variables
     public Void visit(SaDecVar node) {
@@ -95,7 +95,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         }
 
         defaultOut(node);
-        return null;
+        return super.visit(node);
     }
 // Appel Var
     //Var Simple
@@ -123,7 +123,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         }
         node.tsItem = variable;
         defaultOut(node);
-        return null;
+        return super.visit(node);
     }
     //Var Indicee
     public Void visit(SaVarIndicee node) {
@@ -137,7 +137,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         }
         node.tsItem = variable;
         defaultOut(node);
-        return null;
+        return super.visit(node);
     }
 // Déclaration de fonctions
     public Void visit(SaDecFonc node) {
@@ -173,7 +173,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         }
         context = Context.GLOBAL;
         defaultOut(node);
-        return null;
+        return super.visit(node);
 }
 // Appele de fonctions
     public Void visit(SaAppel node) {
@@ -198,6 +198,6 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         }
         node.tsItem = tableGlobale.fonctions.get(identifFonction);
         defaultOut(node);
-        return null;
+        return super.visit(node);
     }
 }
