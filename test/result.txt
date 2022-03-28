@@ -85,91 +85,91 @@
 	varloc4.sa         CORRECT
 	varloc5.sa         CORRECT
 Évaluation de Diff de ts :
-67/84 correct ( 79.76%)
-	add1.ts       CORRECT
-	add2.ts       CORRECT
-	affect1.ts    CORRECT
-	and1.ts       CORRECT
-	and2.ts       CORRECT
-	and3.ts       CORRECT
-	and4.ts       CORRECT
-	and5.ts       CORRECT
-	appel1.ts     CORRECT
-	appel2.ts     CORRECT
-	appel3.ts     CORRECT
-	div1.ts       CORRECT
-	div2.ts       CORRECT
-	div3.ts       CORRECT
-	div4.ts       CORRECT
-	ecrire1.ts    CORRECT
-	ecrire2.ts    CORRECT
-	egal1.ts      CORRECT
-	egal2.ts      CORRECT
-	egal3.ts      CORRECT
-	inf1.ts       CORRECT
-	inf2.ts       CORRECT
-	inf3.ts       CORRECT
-	inf4.ts       CORRECT
-	mult1.ts      CORRECT
-	mult2.ts      CORRECT
-	mult3.ts      CORRECT
-	not1.ts       CORRECT
-	not2.ts       CORRECT
-	not3.ts       CORRECT
-	or1.ts        CORRECT
-	or2.ts        CORRECT
-	or3.ts        CORRECT
-	or4.ts        CORRECT
-	or5.ts        CORRECT
-	parenth1.ts   CORRECT
-	parenth2.ts   CORRECT
-	prio23-1.ts   CORRECT
-	prio23-2.ts   CORRECT
-	prio23-3.ts   CORRECT
-	prio23-4.ts   CORRECT
-	prio34-1.ts   CORRECT
-	prio34-2.ts   CORRECT
-	prio34-3.ts   CORRECT
-	prio34-4.ts   CORRECT
-	prio45-1.ts   CORRECT
-	prio45-2.ts   CORRECT
-	prio45-3.ts   CORRECT
-	prio45-4.ts   CORRECT
-	prio56-1.ts   CORRECT
-	prio56-2.ts   CORRECT
-	prio67-1.ts   CORRECT
-	prio67-2.ts   CORRECT
-	si1.ts        CORRECT
-	si2.ts        CORRECT
-	si3.ts        CORRECT
-	si4.ts        CORRECT
-	si5.ts        CORRECT
-	sub1.ts       CORRECT
-	sub2.ts       CORRECT
-	sub3.ts       CORRECT
-	tab1.ts       CORRECT
-	tab4.ts       CORRECT
-	varglob1.ts   CORRECT
-	varglob2.ts   CORRECT
-	varglob3.ts   CORRECT
-	varglob4.ts   CORRECT
-	affect2.ts         INCORRECT
-	appel-param1.ts    INCORRECT
-	appel-param2.ts    INCORRECT
-	appel-param3.ts    INCORRECT
-	appel-retour1.ts   INCORRECT
-	fibo.ts            INCORRECT
-	rec1.ts            INCORRECT
-	tab2.ts            INCORRECT
-	tab3.ts            INCORRECT
-	tantque1.ts        INCORRECT
-	tantque2.ts        INCORRECT
-	varloc1.ts         INCORRECT
-	varloc2.ts         INCORRECT
-	varloc3.ts         INCORRECT
-	varloc4.ts         INCORRECT
-	affect3.ts   NON-EXISTANT
-	varloc5.ts   NON-EXISTANT
+84/84 correct (100.00%)
+	add1.ts            CORRECT
+	add2.ts            CORRECT
+	affect1.ts         CORRECT
+	affect2.ts         CORRECT
+	affect3.ts         CORRECT
+	and1.ts            CORRECT
+	and2.ts            CORRECT
+	and3.ts            CORRECT
+	and4.ts            CORRECT
+	and5.ts            CORRECT
+	appel-param1.ts    CORRECT
+	appel-param2.ts    CORRECT
+	appel-param3.ts    CORRECT
+	appel-retour1.ts   CORRECT
+	appel1.ts          CORRECT
+	appel2.ts          CORRECT
+	appel3.ts          CORRECT
+	div1.ts            CORRECT
+	div2.ts            CORRECT
+	div3.ts            CORRECT
+	div4.ts            CORRECT
+	ecrire1.ts         CORRECT
+	ecrire2.ts         CORRECT
+	egal1.ts           CORRECT
+	egal2.ts           CORRECT
+	egal3.ts           CORRECT
+	fibo.ts            CORRECT
+	inf1.ts            CORRECT
+	inf2.ts            CORRECT
+	inf3.ts            CORRECT
+	inf4.ts            CORRECT
+	mult1.ts           CORRECT
+	mult2.ts           CORRECT
+	mult3.ts           CORRECT
+	not1.ts            CORRECT
+	not2.ts            CORRECT
+	not3.ts            CORRECT
+	or1.ts             CORRECT
+	or2.ts             CORRECT
+	or3.ts             CORRECT
+	or4.ts             CORRECT
+	or5.ts             CORRECT
+	parenth1.ts        CORRECT
+	parenth2.ts        CORRECT
+	prio23-1.ts        CORRECT
+	prio23-2.ts        CORRECT
+	prio23-3.ts        CORRECT
+	prio23-4.ts        CORRECT
+	prio34-1.ts        CORRECT
+	prio34-2.ts        CORRECT
+	prio34-3.ts        CORRECT
+	prio34-4.ts        CORRECT
+	prio45-1.ts        CORRECT
+	prio45-2.ts        CORRECT
+	prio45-3.ts        CORRECT
+	prio45-4.ts        CORRECT
+	prio56-1.ts        CORRECT
+	prio56-2.ts        CORRECT
+	prio67-1.ts        CORRECT
+	prio67-2.ts        CORRECT
+	rec1.ts            CORRECT
+	si1.ts             CORRECT
+	si2.ts             CORRECT
+	si3.ts             CORRECT
+	si4.ts             CORRECT
+	si5.ts             CORRECT
+	sub1.ts            CORRECT
+	sub2.ts            CORRECT
+	sub3.ts            CORRECT
+	tab1.ts            CORRECT
+	tab2.ts            CORRECT
+	tab3.ts            CORRECT
+	tab4.ts            CORRECT
+	tantque1.ts        CORRECT
+	tantque2.ts        CORRECT
+	varglob1.ts        CORRECT
+	varglob2.ts        CORRECT
+	varglob3.ts        CORRECT
+	varglob4.ts        CORRECT
+	varloc1.ts         CORRECT
+	varloc2.ts         CORRECT
+	varloc3.ts         CORRECT
+	varloc4.ts         CORRECT
+	varloc5.ts         CORRECT
 Évaluation de Execution de sa :
 71/84 correct ( 84.52%)
 	add1.saout            CORRECT
@@ -257,11 +257,12 @@
 	varloc4.saout        INCORRECT
 	varloc5.saout        INCORRECT
 Évaluation de Diff de c3a :
-80/84 correct ( 95.24%)
+82/84 correct ( 97.62%)
 	add1.c3a            CORRECT
 	add2.c3a            CORRECT
 	affect1.c3a         CORRECT
 	affect2.c3a         CORRECT
+	affect3.c3a         CORRECT
 	and1.c3a            CORRECT
 	and2.c3a            CORRECT
 	and3.c3a            CORRECT
@@ -338,16 +339,16 @@
 	varloc2.c3a         CORRECT
 	varloc3.c3a         CORRECT
 	varloc4.c3a         CORRECT
+	varloc5.c3a         CORRECT
 	fibo.c3a   INCORRECT
 	rec1.c3a   INCORRECT
-	affect3.c3a   NON-EXISTANT
-	varloc5.c3a   NON-EXISTANT
 Évaluation de Execution du c3a :
-82/84 correct ( 97.62%)
+84/84 correct (100.00%)
 	add1.c3aout            CORRECT
 	add2.c3aout            CORRECT
 	affect1.c3aout         CORRECT
 	affect2.c3aout         CORRECT
+	affect3.c3aout         CORRECT
 	and1.c3aout            CORRECT
 	and2.c3aout            CORRECT
 	and3.c3aout            CORRECT
@@ -426,42 +427,42 @@
 	varloc2.c3aout         CORRECT
 	varloc3.c3aout         CORRECT
 	varloc4.c3aout         CORRECT
-	affect3.c3aout   NON-EXISTANT
-	varloc5.c3aout   NON-EXISTANT
+	varloc5.c3aout         CORRECT
 Évaluation de Diff de pre-nasm :
-23/84 correct ( 27.38%)
-	add1.pre-nasm       CORRECT
-	add2.pre-nasm       CORRECT
-	affect1.pre-nasm    CORRECT
-	ecrire1.pre-nasm    CORRECT
-	ecrire2.pre-nasm    CORRECT
-	mult1.pre-nasm      CORRECT
-	mult2.pre-nasm      CORRECT
-	mult3.pre-nasm      CORRECT
-	parenth1.pre-nasm   CORRECT
-	parenth2.pre-nasm   CORRECT
-	prio34-1.pre-nasm   CORRECT
-	prio34-2.pre-nasm   CORRECT
-	prio45-2.pre-nasm   CORRECT
-	si1.pre-nasm        CORRECT
-	si5.pre-nasm        CORRECT
-	sub1.pre-nasm       CORRECT
-	sub2.pre-nasm       CORRECT
-	sub3.pre-nasm       CORRECT
-	tab1.pre-nasm       CORRECT
-	varglob1.pre-nasm   CORRECT
-	varglob2.pre-nasm   CORRECT
-	varglob3.pre-nasm   CORRECT
-	varglob4.pre-nasm   CORRECT
+27/84 correct ( 32.14%)
+	add1.pre-nasm           CORRECT
+	add2.pre-nasm           CORRECT
+	affect1.pre-nasm        CORRECT
+	affect3.pre-nasm        CORRECT
+	appel-param1.pre-nasm   CORRECT
+	appel-param2.pre-nasm   CORRECT
+	appel-param3.pre-nasm   CORRECT
+	ecrire1.pre-nasm        CORRECT
+	ecrire2.pre-nasm        CORRECT
+	mult1.pre-nasm          CORRECT
+	mult2.pre-nasm          CORRECT
+	mult3.pre-nasm          CORRECT
+	parenth1.pre-nasm       CORRECT
+	parenth2.pre-nasm       CORRECT
+	prio34-1.pre-nasm       CORRECT
+	prio34-2.pre-nasm       CORRECT
+	prio45-2.pre-nasm       CORRECT
+	si1.pre-nasm            CORRECT
+	si5.pre-nasm            CORRECT
+	sub1.pre-nasm           CORRECT
+	sub2.pre-nasm           CORRECT
+	sub3.pre-nasm           CORRECT
+	tab1.pre-nasm           CORRECT
+	varglob1.pre-nasm       CORRECT
+	varglob2.pre-nasm       CORRECT
+	varglob3.pre-nasm       CORRECT
+	varglob4.pre-nasm       CORRECT
 	affect2.pre-nasm         INCORRECT
 	and1.pre-nasm            INCORRECT
 	and2.pre-nasm            INCORRECT
 	and3.pre-nasm            INCORRECT
 	and4.pre-nasm            INCORRECT
 	and5.pre-nasm            INCORRECT
-	appel-param1.pre-nasm    INCORRECT
-	appel-param2.pre-nasm    INCORRECT
-	appel-param3.pre-nasm    INCORRECT
 	appel-retour1.pre-nasm   INCORRECT
 	appel1.pre-nasm          INCORRECT
 	appel2.pre-nasm          INCORRECT
@@ -512,14 +513,14 @@
 	varloc2.pre-nasm         INCORRECT
 	varloc3.pre-nasm         INCORRECT
 	varloc4.pre-nasm         INCORRECT
-	affect3.pre-nasm   NON-EXISTANT
-	varloc5.pre-nasm   NON-EXISTANT
+	varloc5.pre-nasm         INCORRECT
 Évaluation de Execution du pre-nasm :
-81/84 correct ( 96.43%)
+83/84 correct ( 98.81%)
 	add1.pre-nasmout            CORRECT
 	add2.pre-nasmout            CORRECT
 	affect1.pre-nasmout         CORRECT
 	affect2.pre-nasmout         CORRECT
+	affect3.pre-nasmout         CORRECT
 	and1.pre-nasmout            CORRECT
 	and2.pre-nasmout            CORRECT
 	and3.pre-nasmout            CORRECT
@@ -597,15 +598,15 @@
 	varloc2.pre-nasmout         CORRECT
 	varloc3.pre-nasmout         CORRECT
 	varloc4.pre-nasmout         CORRECT
+	varloc5.pre-nasmout         CORRECT
 	fibo.pre-nasmout   INCORRECT
-	affect3.pre-nasmout   NON-EXISTANT
-	varloc5.pre-nasmout   NON-EXISTANT
 Évaluation de Diff de nasm :
 0/84 correct (  0.00%)
 	add1.nasm            INCORRECT
 	add2.nasm            INCORRECT
 	affect1.nasm         INCORRECT
 	affect2.nasm         INCORRECT
+	affect3.nasm         INCORRECT
 	and1.nasm            INCORRECT
 	and2.nasm            INCORRECT
 	and3.nasm            INCORRECT
@@ -684,14 +685,14 @@
 	varloc2.nasm         INCORRECT
 	varloc3.nasm         INCORRECT
 	varloc4.nasm         INCORRECT
-	affect3.nasm   NON-EXISTANT
-	varloc5.nasm   NON-EXISTANT
+	varloc5.nasm         INCORRECT
 Évaluation de Execution du nasm :
-81/84 correct ( 96.43%)
+83/84 correct ( 98.81%)
 	add1.nasmout            CORRECT
 	add2.nasmout            CORRECT
 	affect1.nasmout         CORRECT
 	affect2.nasmout         CORRECT
+	affect3.nasmout         CORRECT
 	and1.nasmout            CORRECT
 	and2.nasmout            CORRECT
 	and3.nasmout            CORRECT
@@ -769,18 +770,11 @@
 	varloc2.nasmout         CORRECT
 	varloc3.nasmout         CORRECT
 	varloc4.nasmout         CORRECT
+	varloc5.nasmout         CORRECT
 	fibo.nasmout   INCORRECT
-	affect3.nasmout   NON-EXISTANT
-	varloc5.nasmout   NON-EXISTANT
 Évaluation de Execution du binaire :
 0/84 correct (  0.00%)
 ------------------------------EVALUATION ERRORS------------------------------
-ERROR evaluateSa for input affect3.l : 'il ya une variable du même nom
-'
-
-ERROR evaluateSa for input varloc5.l : 'il ya une variable du même nom
-'
-
 ERROR evaluateExecutable for input add1.l : 'b'/bin/sh: 1: nasm: not found\n''
 
 ERROR evaluateExecutable for input add2.l : 'b'/bin/sh: 1: nasm: not found\n''
@@ -788,6 +782,8 @@ ERROR evaluateExecutable for input add2.l : 'b'/bin/sh: 1: nasm: not found\n''
 ERROR evaluateExecutable for input affect1.l : 'b'/bin/sh: 1: nasm: not found\n''
 
 ERROR evaluateExecutable for input affect2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input affect3.l : 'b'/bin/sh: 1: nasm: not found\n''
 
 ERROR evaluateExecutable for input and1.l : 'b'/bin/sh: 1: nasm: not found\n''
 
@@ -944,3 +940,5 @@ ERROR evaluateExecutable for input varloc2.l : 'b'/bin/sh: 1: nasm: not found\n'
 ERROR evaluateExecutable for input varloc3.l : 'b'/bin/sh: 1: nasm: not found\n''
 
 ERROR evaluateExecutable for input varloc4.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input varloc5.l : 'b'/bin/sh: 1: nasm: not found\n''

@@ -72,7 +72,7 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
 
         defaultOut(node);
 
-        return super.visit(node);
+        return null;
     }
     // Déclaration de variables
     public Void visit(SaDecVar node) {
@@ -173,15 +173,15 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         }
         context = Context.GLOBAL;
         defaultOut(node);
-        return super.visit(node);
+        return null;
 }
 // Appele de fonctions
     public Void visit(SaAppel node) {
         String identifFonction = node.getNom();
-        Integer nbArguments = 0;
+        int nbArguments = 0;
 
         if (node.getArguments() != null){
-            nbArguments = (Integer)node.getArguments().length();
+            nbArguments = node.getArguments().length();
         }
         defaultIn(node);
         if(tableGlobale.getFct(identifFonction) == null){
@@ -189,9 +189,9 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
             System.exit(1);
         }
 
-        if(node.getArguments() != null && (tableGlobale.getFct(identifFonction).getNbArgs() == nbArguments)){
+       /*if(node.getArguments() != null && (tableGlobale.getFct(identifFonction).getNbArgs() == nbArguments)){
             node.getArguments().accept(this);
-        }
+        }*/
         else if (tableGlobale.getFct(identifFonction).getNbArgs() != nbArguments){
             System.err.println("Le nombre des arguments incopatible.");
             System.exit(1);
