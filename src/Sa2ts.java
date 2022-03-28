@@ -1,5 +1,6 @@
 import sa.*;
 import ts.Ts;
+import ts.TsItemVar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,59 +37,61 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         }
         return isInParam;
     }
+
+    private void mainExists() {
+        if (!tableGlobale.fonctions.containsKey("main")) {
+            System.err.println("La fonction main n'existe pas");
+            System.exit(1);
+        }
+    }
 //Créaion de la table des symboles
     public Sa2ts(SaNode racine){
         tableGlobale = new Ts();
+        tableLocaleCourante = null;
         context= Context.GLOBAL;
-        racine.accept(this);
+        visit((SaProg) racine);
+        mainExists();
     }
 
     public Ts getTableGlobale() {
         return tableGlobale;
     }
-    public Ts getTableLocalCourante() {
-        return tableLocaleCourante;
-    }
-    public Context getContext() {
-        return context;
-    }
 
 // Déclaration de variables et de Tableaux
     // Déclaration de Tableaux
     public Void visit(SaDecTab node) {
-        Ts Tablecourante = tableGlobale;
         int tab_length = node.getTaille();
         String identif = node.getNom();
         defaultIn(node);
-        if (Tablecourante.getVar(identif) != null) {
+        if (tableGlobale.getVar(identif) != null) {
             System.err.println("il existe déja un tab  du même nom");
             System.exit(1);
         }
         else if(context.isParam())  node.tsItem = tableLocaleCourante.addParam(identif);
-        else node.tsItem = Tablecourante.addVar(identif,tab_length*4);
+        else node.tsItem = tableGlobale.addVar(identif,tab_length*4);
 
         defaultOut(node);
+
         return null;
     }
     // Déclaration de variables
     public Void visit(SaDecVar node) {
-        Ts Tablecourante = null;
+        Ts tablecourante = tableGlobale;
         String identif = node.getNom();
         defaultIn(node);
         if (context.isLocal()) {
-            Tablecourante = tableLocaleCourante;
+            tablecourante = tableLocaleCourante;
         }
-        else Tablecourante = tableGlobale;
 
-        if (Tablecourante.getVar(identif) == null && context.isParam()) {
+        if (tablecourante.getVar(identif) == null && context.isParam()) {
             node.tsItem = tableLocaleCourante.addParam(identif);
         }
-        else if (Tablecourante.getVar(identif) != null){
+        else if (tablecourante.getVar(identif) != null){
             System.err.println("il ya une variable du même nom");
             System.exit(1);
         }
         else{
-            node.tsItem = Tablecourante.addVar(identif, 4);
+            node.tsItem = tablecourante.addVar(identif, 4);
         }
 
         defaultOut(node);
@@ -97,32 +100,28 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
 // Appel Var
     //Var Simple
     public Void visit(SaVarSimple node) {
+        Ts tablecourante = tableGlobale;
         String identif = node.getNom();
         defaultIn(node);
-        /*if(context == Context.LOCAL || context == Context.PARAM){
-            if(tableLocaleCourante.getVar(identif) == null) {
-                System.out.println("dz");
-                System.err.println("la variable référencée n'existe pas");
-                System.exit(1);
-            }
-        }*/
-        System.out.println(tableGlobale.getVar(identif) == null);
+        /*if (context.isLocal()) {
+            tablecourante = tableLocaleCourante;
+        }
         if(context == Context.GLOBAL && tableGlobale.getVar(identif) == null){
             System.err.println("la variable référencée n'existe pas");
             System.exit(1);
         }
-        System.out.println(tableLocaleCourante.getVar(identif) == null);
         if((context == Context.LOCAL || context == Context.PARAM) && (tableLocaleCourante.getVar(identif) == null && tableGlobale.getVar(identif) == null)) {
             System.err.println("la variable référencée n'existe pas");
             System.exit(1);
         }
-        /*if (context == Context.GLOBAL) {
-            if(tableGlobale.getVar(identif) == null){
-                System.err.println("la variable référencée n'existe pas");
-                System.exit(1);
-            }
-        }*/
-
+        else node.tsItem = tablecourante.variables.get(identif);*/
+        TsItemVar variable = tableLocaleCourante.variables.get(identif);
+        if (variable == null) variable = tableGlobale.variables.get(identif);
+        if (variable == null) {
+            System.err.println("la variable référencée n'existe pas");
+            System.exit(1);
+        }
+        node.tsItem = variable;
         defaultOut(node);
         return null;
     }
@@ -130,15 +129,13 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
     public Void visit(SaVarIndicee node) {
         String identif = node.getNom();
         defaultIn(node);
-        if(tableGlobale.getVar(identif) == null) {
+        TsItemVar variable = tableLocaleCourante.variables.get(identif);
+        if (variable == null) variable = tableGlobale.variables.get(identif);
+        if (variable == null) {
             System.err.println("la variable référencée n'existe pas");
             System.exit(1);
         }
-        if (node.getIndice() == null){
-            System.err.println("l'indice de la variable est manquante");
-            System.exit(1);
-        }
-
+        node.tsItem = variable;
         defaultOut(node);
         return null;
     }
@@ -175,18 +172,15 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
             node.getCorps().accept(this);
         }
         context = Context.GLOBAL;
-
         defaultOut(node);
         return null;
 }
 // Appele de fonctions
     public Void visit(SaAppel node) {
         String identifFonction = node.getNom();
-        Integer nbArguments = null;
-        if (node.getArguments() == null){
-            nbArguments = 0;
-        }
-        else if (node.getArguments() != null){
+        Integer nbArguments = 0;
+
+        if (node.getArguments() != null){
             nbArguments = (Integer)node.getArguments().length();
         }
         defaultIn(node);
@@ -198,13 +192,11 @@ public class Sa2ts extends SaDepthFirstVisitor<Void> {
         if(node.getArguments() != null && (tableGlobale.getFct(identifFonction).getNbArgs() == nbArguments)){
             node.getArguments().accept(this);
         }
-        if(node.getArguments() != null && (tableGlobale.getFct(identifFonction).getNbArgs() == nbArguments)){
-            node.getArguments().accept(this);
-        }
         else if (tableGlobale.getFct(identifFonction).getNbArgs() != nbArguments){
             System.err.println("Le nombre des arguments incopatible.");
             System.exit(1);
         }
+        node.tsItem = tableGlobale.fonctions.get(identifFonction);
         defaultOut(node);
         return null;
     }

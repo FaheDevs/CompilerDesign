@@ -171,91 +171,91 @@
 	varloc4.ts         CORRECT
 	varloc5.ts         CORRECT
 Évaluation de Execution de sa :
-57/84 correct ( 67.86%)
-	add1.saout       CORRECT
-	add2.saout       CORRECT
-	and1.saout       CORRECT
-	and2.saout       CORRECT
-	and3.saout       CORRECT
-	and4.saout       CORRECT
-	and5.saout       CORRECT
-	div1.saout       CORRECT
-	div2.saout       CORRECT
-	div3.saout       CORRECT
-	div4.saout       CORRECT
-	ecrire1.saout    CORRECT
-	ecrire2.saout    CORRECT
-	egal1.saout      CORRECT
-	egal2.saout      CORRECT
-	egal3.saout      CORRECT
-	inf1.saout       CORRECT
-	inf2.saout       CORRECT
-	inf3.saout       CORRECT
-	inf4.saout       CORRECT
-	mult1.saout      CORRECT
-	mult2.saout      CORRECT
-	mult3.saout      CORRECT
-	not1.saout       CORRECT
-	not2.saout       CORRECT
-	not3.saout       CORRECT
-	or1.saout        CORRECT
-	or2.saout        CORRECT
-	or3.saout        CORRECT
-	or4.saout        CORRECT
-	or5.saout        CORRECT
-	parenth1.saout   CORRECT
-	parenth2.saout   CORRECT
-	prio23-1.saout   CORRECT
-	prio23-2.saout   CORRECT
-	prio23-3.saout   CORRECT
-	prio23-4.saout   CORRECT
-	prio34-1.saout   CORRECT
-	prio34-2.saout   CORRECT
-	prio34-3.saout   CORRECT
-	prio34-4.saout   CORRECT
-	prio45-1.saout   CORRECT
-	prio45-2.saout   CORRECT
-	prio45-3.saout   CORRECT
-	prio45-4.saout   CORRECT
-	prio56-1.saout   CORRECT
-	prio56-2.saout   CORRECT
-	prio67-1.saout   CORRECT
-	prio67-2.saout   CORRECT
-	si1.saout        CORRECT
-	si2.saout        CORRECT
-	si3.saout        CORRECT
-	si4.saout        CORRECT
-	si5.saout        CORRECT
-	sub1.saout       CORRECT
-	sub2.saout       CORRECT
-	sub3.saout       CORRECT
-	affect1.saout         INCORRECT
-	affect2.saout         INCORRECT
-	affect3.saout         INCORRECT
-	appel-param1.saout    INCORRECT
-	appel-param2.saout    INCORRECT
-	appel-param3.saout    INCORRECT
-	appel-retour1.saout   INCORRECT
-	appel1.saout          INCORRECT
-	appel2.saout          INCORRECT
-	appel3.saout          INCORRECT
-	fibo.saout            INCORRECT
-	rec1.saout            INCORRECT
-	tab1.saout            INCORRECT
-	tab2.saout            INCORRECT
-	tab3.saout            INCORRECT
-	tab4.saout            INCORRECT
-	tantque1.saout        INCORRECT
-	tantque2.saout        INCORRECT
-	varglob1.saout        INCORRECT
-	varglob2.saout        INCORRECT
-	varglob3.saout        INCORRECT
-	varglob4.saout        INCORRECT
-	varloc1.saout         INCORRECT
-	varloc2.saout         INCORRECT
-	varloc3.saout         INCORRECT
-	varloc4.saout         INCORRECT
-	varloc5.saout         INCORRECT
+70/84 correct ( 83.33%)
+	add1.saout            CORRECT
+	add2.saout            CORRECT
+	affect1.saout         CORRECT
+	and1.saout            CORRECT
+	and2.saout            CORRECT
+	and3.saout            CORRECT
+	and4.saout            CORRECT
+	and5.saout            CORRECT
+	appel-param1.saout    CORRECT
+	appel-retour1.saout   CORRECT
+	appel1.saout          CORRECT
+	appel2.saout          CORRECT
+	appel3.saout          CORRECT
+	div1.saout            CORRECT
+	div2.saout            CORRECT
+	div3.saout            CORRECT
+	div4.saout            CORRECT
+	ecrire1.saout         CORRECT
+	ecrire2.saout         CORRECT
+	egal1.saout           CORRECT
+	egal2.saout           CORRECT
+	egal3.saout           CORRECT
+	fibo.saout            CORRECT
+	inf1.saout            CORRECT
+	inf2.saout            CORRECT
+	inf3.saout            CORRECT
+	inf4.saout            CORRECT
+	mult1.saout           CORRECT
+	mult2.saout           CORRECT
+	mult3.saout           CORRECT
+	not1.saout            CORRECT
+	not2.saout            CORRECT
+	not3.saout            CORRECT
+	or1.saout             CORRECT
+	or2.saout             CORRECT
+	or3.saout             CORRECT
+	or4.saout             CORRECT
+	or5.saout             CORRECT
+	parenth1.saout        CORRECT
+	parenth2.saout        CORRECT
+	prio23-1.saout        CORRECT
+	prio23-2.saout        CORRECT
+	prio23-3.saout        CORRECT
+	prio23-4.saout        CORRECT
+	prio34-1.saout        CORRECT
+	prio34-2.saout        CORRECT
+	prio34-3.saout        CORRECT
+	prio34-4.saout        CORRECT
+	prio45-1.saout        CORRECT
+	prio45-2.saout        CORRECT
+	prio45-3.saout        CORRECT
+	prio45-4.saout        CORRECT
+	prio56-1.saout        CORRECT
+	prio56-2.saout        CORRECT
+	prio67-1.saout        CORRECT
+	prio67-2.saout        CORRECT
+	rec1.saout            CORRECT
+	si1.saout             CORRECT
+	si2.saout             CORRECT
+	si3.saout             CORRECT
+	si4.saout             CORRECT
+	si5.saout             CORRECT
+	sub1.saout            CORRECT
+	sub2.saout            CORRECT
+	sub3.saout            CORRECT
+	tab1.saout            CORRECT
+	varglob1.saout        CORRECT
+	varglob2.saout        CORRECT
+	varglob3.saout        CORRECT
+	varglob4.saout        CORRECT
+	affect2.saout        INCORRECT
+	affect3.saout        INCORRECT
+	appel-param2.saout   INCORRECT
+	appel-param3.saout   INCORRECT
+	tab2.saout           INCORRECT
+	tab3.saout           INCORRECT
+	tab4.saout           INCORRECT
+	tantque1.saout       INCORRECT
+	tantque2.saout       INCORRECT
+	varloc1.saout        INCORRECT
+	varloc2.saout        INCORRECT
+	varloc3.saout        INCORRECT
+	varloc4.saout        INCORRECT
+	varloc5.saout        INCORRECT
 Évaluation de Diff de c3a :
 82/84 correct ( 97.62%)
 	add1.c3a            CORRECT
@@ -602,18 +602,198 @@
 	fibo.pre-nasmout   INCORRECT
 Évaluation de Diff de nasm :
 0/84 correct (  0.00%)
+	add1.nasm            INCORRECT
+	add2.nasm            INCORRECT
+	affect1.nasm         INCORRECT
+	affect2.nasm         INCORRECT
+	affect3.nasm         INCORRECT
+	and1.nasm            INCORRECT
+	and2.nasm            INCORRECT
+	and3.nasm            INCORRECT
+	and4.nasm            INCORRECT
+	and5.nasm            INCORRECT
+	appel-param1.nasm    INCORRECT
+	appel-param2.nasm    INCORRECT
+	appel-param3.nasm    INCORRECT
+	appel-retour1.nasm   INCORRECT
+	appel1.nasm          INCORRECT
+	appel2.nasm          INCORRECT
+	appel3.nasm          INCORRECT
+	div1.nasm            INCORRECT
+	div2.nasm            INCORRECT
+	div3.nasm            INCORRECT
+	div4.nasm            INCORRECT
+	ecrire1.nasm         INCORRECT
+	ecrire2.nasm         INCORRECT
+	egal1.nasm           INCORRECT
+	egal2.nasm           INCORRECT
+	egal3.nasm           INCORRECT
+	fibo.nasm            INCORRECT
+	inf1.nasm            INCORRECT
+	inf2.nasm            INCORRECT
+	inf3.nasm            INCORRECT
+	inf4.nasm            INCORRECT
+	mult1.nasm           INCORRECT
+	mult2.nasm           INCORRECT
+	mult3.nasm           INCORRECT
+	not1.nasm            INCORRECT
+	not2.nasm            INCORRECT
+	not3.nasm            INCORRECT
+	or1.nasm             INCORRECT
+	or2.nasm             INCORRECT
+	or3.nasm             INCORRECT
+	or4.nasm             INCORRECT
+	or5.nasm             INCORRECT
+	parenth1.nasm        INCORRECT
+	parenth2.nasm        INCORRECT
+	prio23-1.nasm        INCORRECT
+	prio23-2.nasm        INCORRECT
+	prio23-3.nasm        INCORRECT
+	prio23-4.nasm        INCORRECT
+	prio34-1.nasm        INCORRECT
+	prio34-2.nasm        INCORRECT
+	prio34-3.nasm        INCORRECT
+	prio34-4.nasm        INCORRECT
+	prio45-1.nasm        INCORRECT
+	prio45-2.nasm        INCORRECT
+	prio45-3.nasm        INCORRECT
+	prio45-4.nasm        INCORRECT
+	prio56-1.nasm        INCORRECT
+	prio56-2.nasm        INCORRECT
+	prio67-1.nasm        INCORRECT
+	prio67-2.nasm        INCORRECT
+	rec1.nasm            INCORRECT
+	si1.nasm             INCORRECT
+	si2.nasm             INCORRECT
+	si3.nasm             INCORRECT
+	si4.nasm             INCORRECT
+	si5.nasm             INCORRECT
+	sub1.nasm            INCORRECT
+	sub2.nasm            INCORRECT
+	sub3.nasm            INCORRECT
+	tab1.nasm            INCORRECT
+	tab2.nasm            INCORRECT
+	tab3.nasm            INCORRECT
+	tab4.nasm            INCORRECT
+	tantque1.nasm        INCORRECT
+	tantque2.nasm        INCORRECT
+	varglob1.nasm        INCORRECT
+	varglob2.nasm        INCORRECT
+	varglob3.nasm        INCORRECT
+	varglob4.nasm        INCORRECT
+	varloc1.nasm         INCORRECT
+	varloc2.nasm         INCORRECT
+	varloc3.nasm         INCORRECT
+	varloc4.nasm         INCORRECT
+	varloc5.nasm         INCORRECT
 Évaluation de Execution du nasm :
-0/84 correct (  0.00%)
+83/84 correct ( 98.81%)
+	add1.nasmout            CORRECT
+	add2.nasmout            CORRECT
+	affect1.nasmout         CORRECT
+	affect2.nasmout         CORRECT
+	affect3.nasmout         CORRECT
+	and1.nasmout            CORRECT
+	and2.nasmout            CORRECT
+	and3.nasmout            CORRECT
+	and4.nasmout            CORRECT
+	and5.nasmout            CORRECT
+	appel-param1.nasmout    CORRECT
+	appel-param2.nasmout    CORRECT
+	appel-param3.nasmout    CORRECT
+	appel-retour1.nasmout   CORRECT
+	appel1.nasmout          CORRECT
+	appel2.nasmout          CORRECT
+	appel3.nasmout          CORRECT
+	div1.nasmout            CORRECT
+	div2.nasmout            CORRECT
+	div3.nasmout            CORRECT
+	div4.nasmout            CORRECT
+	ecrire1.nasmout         CORRECT
+	ecrire2.nasmout         CORRECT
+	egal1.nasmout           CORRECT
+	egal2.nasmout           CORRECT
+	egal3.nasmout           CORRECT
+	inf1.nasmout            CORRECT
+	inf2.nasmout            CORRECT
+	inf3.nasmout            CORRECT
+	inf4.nasmout            CORRECT
+	mult1.nasmout           CORRECT
+	mult2.nasmout           CORRECT
+	mult3.nasmout           CORRECT
+	not1.nasmout            CORRECT
+	not2.nasmout            CORRECT
+	not3.nasmout            CORRECT
+	or1.nasmout             CORRECT
+	or2.nasmout             CORRECT
+	or3.nasmout             CORRECT
+	or4.nasmout             CORRECT
+	or5.nasmout             CORRECT
+	parenth1.nasmout        CORRECT
+	parenth2.nasmout        CORRECT
+	prio23-1.nasmout        CORRECT
+	prio23-2.nasmout        CORRECT
+	prio23-3.nasmout        CORRECT
+	prio23-4.nasmout        CORRECT
+	prio34-1.nasmout        CORRECT
+	prio34-2.nasmout        CORRECT
+	prio34-3.nasmout        CORRECT
+	prio34-4.nasmout        CORRECT
+	prio45-1.nasmout        CORRECT
+	prio45-2.nasmout        CORRECT
+	prio45-3.nasmout        CORRECT
+	prio45-4.nasmout        CORRECT
+	prio56-1.nasmout        CORRECT
+	prio56-2.nasmout        CORRECT
+	prio67-1.nasmout        CORRECT
+	prio67-2.nasmout        CORRECT
+	rec1.nasmout            CORRECT
+	si1.nasmout             CORRECT
+	si2.nasmout             CORRECT
+	si3.nasmout             CORRECT
+	si4.nasmout             CORRECT
+	si5.nasmout             CORRECT
+	sub1.nasmout            CORRECT
+	sub2.nasmout            CORRECT
+	sub3.nasmout            CORRECT
+	tab1.nasmout            CORRECT
+	tab2.nasmout            CORRECT
+	tab3.nasmout            CORRECT
+	tab4.nasmout            CORRECT
+	tantque1.nasmout        CORRECT
+	tantque2.nasmout        CORRECT
+	varglob1.nasmout        CORRECT
+	varglob2.nasmout        CORRECT
+	varglob3.nasmout        CORRECT
+	varglob4.nasmout        CORRECT
+	varloc1.nasmout         CORRECT
+	varloc2.nasmout         CORRECT
+	varloc3.nasmout         CORRECT
+	varloc4.nasmout         CORRECT
+	varloc5.nasmout         CORRECT
+	fibo.nasmout   INCORRECT
 Évaluation de Execution du binaire :
 0/84 correct (  0.00%)
 ------------------------------EVALUATION ERRORS------------------------------
-ERROR evaluateSa for input affect1.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
+ERROR evaluateSa for input tab2.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<parameter1>.tsItem" is null
+	at sa.SaEval.visit(SaEval.java:195)
+	at sa.SaEval.visit(SaEval.java:6)
+	at sa.SaVarSimple.accept(SaVarSimple.java:16)
+	at sa.SaEval.visit(SaEval.java:90)
+	at sa.SaEval.visit(SaEval.java:6)
+	at sa.SaExpVar.accept(SaExpVar.java:13)
+	at sa.SaEval.visit(SaEval.java:254)
+	at sa.SaEval.visit(SaEval.java:6)
+	at sa.SaExpAdd.accept(SaExpAdd.java:16)
+	at sa.SaEval.visit(SaEval.java:159)
 	at sa.SaEval.visit(SaEval.java:6)
 	at sa.SaInstAffect.accept(SaInstAffect.java:15)
 	at sa.SaEval.visit(SaEval.java:126)
 	at sa.SaEval.visit(SaEval.java:6)
 	at sa.SaLInst.accept(SaLInst.java:16)
+	at sa.SaEval.visit(SaEval.java:127)
+	at sa.SaEval.visit(SaEval.java:6)
+	at sa.SaLInst.accept(SaLInst.java:16)
 	at sa.SaEval.visit(SaEval.java:351)
 	at sa.SaEval.visit(SaEval.java:6)
 	at sa.SaInstBloc.accept(SaInstBloc.java:12)
@@ -624,28 +804,26 @@ ERROR evaluateSa for input affect1.l : 'java.lang.NullPointerException: Cannot r
 	at SaVM.main(SaVM.java:464)
 '
 
-ERROR evaluateSa for input affect2.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
+ERROR evaluateSa for input tab3.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<parameter1>.tsItem" is null
+	at sa.SaEval.visit(SaEval.java:195)
+	at sa.SaEval.visit(SaEval.java:6)
+	at sa.SaVarSimple.accept(SaVarSimple.java:16)
+	at sa.SaEval.visit(SaEval.java:90)
+	at sa.SaEval.visit(SaEval.java:6)
+	at sa.SaExpVar.accept(SaExpVar.java:13)
+	at sa.SaEval.visit(SaEval.java:254)
+	at sa.SaEval.visit(SaEval.java:6)
+	at sa.SaExpAdd.accept(SaExpAdd.java:16)
+	at sa.SaEval.visit(SaEval.java:159)
 	at sa.SaEval.visit(SaEval.java:6)
 	at sa.SaInstAffect.accept(SaInstAffect.java:15)
 	at sa.SaEval.visit(SaEval.java:126)
 	at sa.SaEval.visit(SaEval.java:6)
 	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
+	at sa.SaEval.visit(SaEval.java:127)
 	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
-
-ERROR evaluateSa for input affect3.l : 'java.lang.NullPointerException: Cannot invoke "ts.TsItemFct.getTable()" because "<local2>" is null
-	at sa.SaEval.visit(SaEval.java:215)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.visit(SaEval.java:126)
+	at sa.SaLInst.accept(SaLInst.java:16)
+	at sa.SaEval.visit(SaEval.java:127)
 	at sa.SaEval.visit(SaEval.java:6)
 	at sa.SaLInst.accept(SaLInst.java:16)
 	at sa.SaEval.visit(SaEval.java:351)
@@ -658,199 +836,20 @@ ERROR evaluateSa for input affect3.l : 'java.lang.NullPointerException: Cannot i
 	at SaVM.main(SaVM.java:464)
 '
 
-ERROR evaluateSa for input appel-param1.l : 'java.lang.NullPointerException: Cannot invoke "ts.TsItemFct.getTable()" because "<local2>" is null
-	at sa.SaEval.visit(SaEval.java:215)
+ERROR evaluateSa for input tab4.l : 'java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.tsItem" is null
+	at sa.SaEval.visit(SaEval.java:394)
 	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.visit(SaEval.java:126)
+	at sa.SaVarIndicee.accept(SaVarIndicee.java:19)
+	at sa.SaEval.visit(SaEval.java:90)
 	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
-
-ERROR evaluateSa for input appel-param2.l : 'java.lang.NullPointerException: Cannot invoke "ts.TsItemFct.getTable()" because "<local2>" is null
-	at sa.SaEval.visit(SaEval.java:215)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
-
-ERROR evaluateSa for input appel-param3.l : 'java.lang.NullPointerException: Cannot invoke "ts.TsItemFct.getTable()" because "<local2>" is null
-	at sa.SaEval.visit(SaEval.java:215)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
-
-ERROR evaluateSa for input appel-retour1.l : 'java.lang.NullPointerException: Cannot invoke "ts.TsItemFct.getTable()" because "<local2>" is null
-	at sa.SaEval.visit(SaEval.java:215)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.visit(SaEval.java:245)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaExpAppel.accept(SaExpAppel.java:13)
-	at sa.SaEval.visit(SaEval.java:98)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstEcriture.accept(SaInstEcriture.java:13)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
-
-ERROR evaluateSa for input appel1.l : 'java.lang.NullPointerException: Cannot invoke "ts.TsItemFct.getTable()" because "<local2>" is null
-	at sa.SaEval.visit(SaEval.java:215)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
-
-ERROR evaluateSa for input appel2.l : 'java.lang.NullPointerException: Cannot invoke "ts.TsItemFct.getTable()" because "<local2>" is null
-	at sa.SaEval.visit(SaEval.java:215)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
-
-ERROR evaluateSa for input appel3.l : 'java.lang.NullPointerException: Cannot invoke "ts.TsItemFct.getTable()" because "<local2>" is null
-	at sa.SaEval.visit(SaEval.java:215)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
-
-ERROR evaluateSa for input fibo.l : 'java.lang.NullPointerException: Cannot invoke "ts.TsItemFct.getTable()" because "<local2>" is null
-	at sa.SaEval.visit(SaEval.java:215)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.visit(SaEval.java:245)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaExpAppel.accept(SaExpAppel.java:13)
-	at sa.SaEval.visit(SaEval.java:98)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstEcriture.accept(SaInstEcriture.java:13)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
-
-ERROR evaluateSa for input rec1.l : 'java.lang.NullPointerException: Cannot invoke "ts.TsItemFct.getTable()" because "<local2>" is null
-	at sa.SaEval.visit(SaEval.java:215)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.visit(SaEval.java:245)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaExpAppel.accept(SaExpAppel.java:13)
-	at sa.SaEval.visit(SaEval.java:98)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstEcriture.accept(SaInstEcriture.java:13)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
-
-ERROR evaluateSa for input tab1.l : 'java.lang.NullPointerException: Cannot read field "adresse" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:160)
+	at sa.SaExpVar.accept(SaExpVar.java:13)
+	at sa.SaEval.visit(SaEval.java:159)
 	at sa.SaEval.visit(SaEval.java:6)
 	at sa.SaInstAffect.accept(SaInstAffect.java:15)
 	at sa.SaEval.visit(SaEval.java:126)
 	at sa.SaEval.visit(SaEval.java:6)
 	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
-
-ERROR evaluateSa for input tab2.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
+	at sa.SaEval.visit(SaEval.java:127)
 	at sa.SaEval.visit(SaEval.java:6)
 	at sa.SaLInst.accept(SaLInst.java:16)
 	at sa.SaEval.visit(SaEval.java:351)
@@ -863,223 +862,170 @@ ERROR evaluateSa for input tab2.l : 'java.lang.NullPointerException: Cannot read
 	at SaVM.main(SaVM.java:464)
 '
 
-ERROR evaluateSa for input tab3.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input add1.l : 'b'/bin/sh: 1: nasm: not found\n''
 
-ERROR evaluateSa for input tab4.l : 'java.lang.NullPointerException: Cannot read field "adresse" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:160)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input add2.l : 'b'/bin/sh: 1: nasm: not found\n''
 
-ERROR evaluateSa for input tantque1.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input affect1.l : 'b'/bin/sh: 1: nasm: not found\n''
 
-ERROR evaluateSa for input tantque2.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input affect2.l : 'b'/bin/sh: 1: nasm: not found\n''
 
-ERROR evaluateSa for input varglob1.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input affect3.l : 'b'/bin/sh: 1: nasm: not found\n''
 
-ERROR evaluateSa for input varglob2.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input and1.l : 'b'/bin/sh: 1: nasm: not found\n''
 
-ERROR evaluateSa for input varglob3.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input and2.l : 'b'/bin/sh: 1: nasm: not found\n''
 
-ERROR evaluateSa for input varglob4.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input and3.l : 'b'/bin/sh: 1: nasm: not found\n''
 
-ERROR evaluateSa for input varloc1.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input and4.l : 'b'/bin/sh: 1: nasm: not found\n''
 
-ERROR evaluateSa for input varloc2.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input and5.l : 'b'/bin/sh: 1: nasm: not found\n''
 
-ERROR evaluateSa for input varloc3.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input appel-param1.l : 'b'/bin/sh: 1: nasm: not found\n''
 
-ERROR evaluateSa for input varloc4.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input appel-param2.l : 'b'/bin/sh: 1: nasm: not found\n''
 
-ERROR evaluateSa for input varloc5.l : 'java.lang.NullPointerException: Cannot read field "portee" because "<local3>.tsItem" is null
-	at sa.SaEval.visit(SaEval.java:165)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstAffect.accept(SaInstAffect.java:15)
-	at sa.SaEval.visit(SaEval.java:126)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaLInst.accept(SaLInst.java:16)
-	at sa.SaEval.visit(SaEval.java:351)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaInstBloc.accept(SaInstBloc.java:12)
-	at sa.SaEval.visit(SaEval.java:232)
-	at sa.SaEval.visit(SaEval.java:6)
-	at sa.SaAppel.accept(SaAppel.java:20)
-	at sa.SaEval.<init>(SaEval.java:22)
-	at SaVM.main(SaVM.java:464)
-'
+ERROR evaluateExecutable for input appel-param3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input appel-retour1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input appel1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input appel2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input appel3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input div1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input div2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input div3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input div4.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input ecrire1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input ecrire2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input egal1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input egal2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input egal3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input fibo.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input inf1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input inf2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input inf3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input inf4.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input mult1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input mult2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input mult3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input not1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input not2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input not3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input or1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input or2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input or3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input or4.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input or5.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input parenth1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input parenth2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio23-1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio23-2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio23-3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio23-4.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio34-1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio34-2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio34-3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio34-4.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio45-1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio45-2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio45-3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio45-4.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio56-1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio56-2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio67-1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input prio67-2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input rec1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input si1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input si2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input si3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input si4.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input si5.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input sub1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input sub2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input sub3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input tab1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input tab2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input tab3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input tab4.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input tantque1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input tantque2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input varglob1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input varglob2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input varglob3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input varglob4.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input varloc1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input varloc2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input varloc3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input varloc4.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input varloc5.l : 'b'/bin/sh: 1: nasm: not found\n''
