@@ -6,6 +6,7 @@ import util.graph.*;
 import util.intset.*;
 import java.util.*;
 import java.io.*;
+import java.util.stream.Stream;
 
 public class Ig {
     public Graph graph;
@@ -23,21 +24,109 @@ public class Ig {
 	this.int2Node = new Node[regNb];
 	this.build();
     }
+	public static Set<List<Integer>> setCartisiantProduct(IntSet a, IntSet b) {
+		Set<List<Integer>> product = new HashSet<>();
 
+		for (int i = 0; i < a.getSize(); i++) {
+			if (a.isMember(i)){
+				for (int j = 0; j < b.getSize(); j++) {
+					if (b.isMember(j)) product.add(List.of(i, j));
+				}
+			}
+		}
+
+		return product;
+	}
     public void build(){
+		for (int i = 0; i < regNb; i++) int2Node[i] = graph.newNode();
+
+		for (NasmInst inst: nasm.sectionText) {
+			//in Edge
+			for (List<Integer> sommets : this.setCartisiantProduct(fgs.in.get(inst), fgs.in.get(inst))) {
+				if (!sommets.get(0).equals(sommets.get(1))){
+					Node from = int2Node[sommets.get(0)];
+					Node to = int2Node[sommets.get(1)];
+					graph.addNOEdge(from, to);
+				}
+			}
+			//out Edge
+			for (List<Integer> sommets : this.setCartisiantProduct(fgs.out.get(inst), fgs.out.get(inst))) {
+				if (!sommets.get(0).equals(sommets.get(1))){
+					Node from = int2Node[sommets.get(0)];
+					Node to = int2Node[sommets.get(1)];
+					graph.addNOEdge(from, to);
+				}
+			}
+		}
 
     }
+	private void colorat(int[] colors, NasmOperand operand) {
+		if (operand == null) return;
+		if (operand instanceof NasmAddress) {
+			NasmAddress address = (NasmAddress) operand;
+			colorat(colors, address.base);
+			colorat(colors, address.offset);
+		}
+		if (operand.isGeneralRegister()) {
+			NasmRegister register = (NasmRegister) operand;
+			colors[register.val] = register.color;
+		}
+	}
 
-    public int[] getPrecoloredTemporaries()
-    {
-	int[] colors = new int[regNb];
-	return colors;
+    public int[] getPrecoloredTemporaries() {
+		int[] colors = new int[regNb];
+		//NasmRegister reg;
+			//nasm.sectionText.stream().flatMap(instruction -> Stream.of(instruction.source, instruction.destination)).forEach(operand -> colorat(colors, operand));
+		for (NasmInst inst : nasm.sectionText) {
+				colorat(colors, inst.source);
+				colorat(colors, inst.destination);
+		}
+
+		return colors;
     }
 
 
     public void allocateRegisters(){
-    }
+		ColorGraph colorGraph = new ColorGraph(graph, 4, getPrecoloredTemporaries());
+		colorGraph.color();
+		int[] colors = colorGraph.color;
 
+		for (NasmInst inst: nasm.sectionText) {
+			allocateRegister(colors, inst.source);
+			allocateRegister(colors, inst.destination);
+		}
+	}
+
+	private void allocateRegister(int[] colors, NasmOperand operand) {
+		if (operand == null) return;
+
+		if (operand instanceof NasmAddress) {
+			NasmAddress address = (NasmAddress) operand;
+			allocateRegister(colors, address.base);
+			allocateRegister(colors, address.offset);
+		}
+
+		if (operand.isGeneralRegister()) {
+			NasmRegister register = (NasmRegister) operand;
+			if (register.color == Nasm.REG_UNK)
+				register.colorRegister(colors[register.val]);
+		}
+	}
+
+	private int getRegister(int color) {
+		switch (color) {
+			case 0:
+				return Nasm.REG_EAX;
+			case 1:
+				return Nasm.REG_EBX;
+			case 2:
+				return Nasm.REG_ECX;
+			case 3:
+				return Nasm.REG_EDX;
+			default:
+				return -1;
+		}
+	}
 
     public void affiche(String baseFileName){
 	String fileName;

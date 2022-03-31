@@ -40,6 +40,29 @@ public class ColorGraph {
     
     public void select()
     {
+        /*int t;
+        while(!stack.empty()){
+            t = stack.pop();
+            removed.remove(t);
+            if(color[t] == NOCOLOR)
+                color[t] = chooseAvailableColor(neighborsColor(t));
+            if(color[t] == NOCOLOR)
+                System.out.println("cannot find a color for vertex "+ t);
+        }*/
+
+        while (!stack.empty()) {
+            int s = stack.pop();
+            IntSet C = neighborsColor(s);
+
+            if (C.getSize() != colorNb - countColored())
+                color[s] = chooseAvailableColor(C);
+        }
+
+    }
+    private int countColored() {
+        return (int) Arrays.stream(color)
+                .filter(c -> c != NOCOLOR)
+                .count();
     }
     
     /*-------------------------------------------------------------------------------------------------------------*/
@@ -48,7 +71,12 @@ public class ColorGraph {
     
     public IntSet neighborsColor(int t)
     {
-	return null;
+        IntSet colorSet = new IntSet(colorNb);
+
+        for(NodeList p = int2Node[t].succ(); p!=null; p=p.tail)
+            if(color[p.head.label()] != NOCOLOR)
+                colorSet.add(color[p.head.label()]);
+        return colorSet;
     }
     
     /*-------------------------------------------------------------------------------------------------------------*/
@@ -57,7 +85,11 @@ public class ColorGraph {
     
     public int chooseAvailableColor(IntSet colorSet)
     {
-	return 0;
+        for(int c=0; c < colorSet.getSize(); c++)
+            if(!colorSet.isMember(c))
+                return c;
+        return NOCOLOR;
+
     }
     
     /*-------------------------------------------------------------------------------------------------------------*/
@@ -66,7 +98,11 @@ public class ColorGraph {
     
     public int neighborsNb(int t)
     {
-	return 0;
+        int nb = 0;
+        for(NodeList p = this.int2Node[t].succ(); p!=null; p=p.tail)
+            if(!removed.isMember(p.head.label()))
+                nb++;
+        return nb;
     }
 
     /*-------------------------------------------------------------------------------------------------------------*/
@@ -78,7 +114,19 @@ public class ColorGraph {
 
     public int simplify()
     {
-	return 0;
+        boolean modif = true;
+        while (stack.size() != vertexNb - countColored() && modif) {
+            modif = false;
+            for (int s = 0; s < int2Node.length; s++) {
+                if (neighborsNb(s) >= colorNb || removed.isMember(s) || color[s] != NOCOLOR) {
+                    continue;
+                }
+                stack.add(s);
+                removed.add(s);
+                modif = true;
+            }
+        }
+        return stack.size();
     }
     
     /*-------------------------------------------------------------------------------------------------------------*/
@@ -86,6 +134,31 @@ public class ColorGraph {
     
     public void spill()
     {
+       /* int t;
+        while(stack.size() != vertexNb){ // some nodes have not been pushed
+            for(t=0; t < vertexNb; t++){
+                if(!removed.isMember(t) && color[t] == NOCOLOR){ //t i still in the graph
+                    System.out.println("vertex " + t + " is a potential spill");
+                    spill.add(t);
+                    removed.add(t);
+                    stack.push(t);
+                    simplify();
+                }
+            }
+        }*/
+        while (stack.size() != vertexNb - countColored()) {
+            //int s = chooseVertex();
+            int s = -1;
+            for (int i = 0; i < int2Node.length; i++)
+                // pas besoin de vérifier deborde : si x est dans déborde, alors il est dans enleves
+                if (!removed.isMember(i) && color[i] == NOCOLOR) s = i;
+
+            if (s < 0) throw new RuntimeException("Could not find a vertex."); // TODO
+            stack.add(s);
+            removed.add(s);
+            spill.add(s);
+            simplify();
+        }
     }
 
 

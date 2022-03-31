@@ -1,6 +1,7 @@
 import c3a.C3a;
 import fg.Fg;
 import fg.FgSolution;
+import ig.Ig;
 import nasm.Nasm;
 import sa.Sa2Xml;
 import sa.SaNode;
@@ -10,12 +11,7 @@ import sc.node.*;
 import ts.Ts;
 
 import java.io.*;
-//import sa.*;
-//import ts.*;
-//import c3a.*;
-//import nasm.*;
-//import fg.*;
-//import ig.*;
+
 
 
 public class Compiler
@@ -106,7 +102,7 @@ public class Compiler
 		System.out.println("[PRINT FG SOLUTION] ");
 		fgSolution.affiche(baseName);
 	    }
-	   /* System.out.println("[BUILD IG] ");
+	    System.out.println("[BUILD IG] ");
 	    Ig ig = new Ig(fgSolution);
 
 	    if(verboseLevel > 1){
@@ -115,7 +111,7 @@ public class Compiler
 	    }
 
 	    System.out.println("[ALLOCATE REGISTERS]");
-	    ig.allocateRegisters();*/
+	    ig.allocateRegisters();
 
 	    System.out.println("[PRINT NASM]");
 	    nasm.afficheNasm(baseName);
