@@ -8,9 +8,9 @@ javac Compiler.java
 file=~/IdeaProjects/2022-compilation-zidani-riazi/test/input/affect2.l
 #do
   echo $file
-  java Compiler $file -v 2
+  java Compiler $file 
 #done
 filen=~/IdeaProjects/2022-compilation-zidani-riazi/test/input/affect2.nasm
 nasm -f elf -dwarf -g $filen
 fileo=~/IdeaProjects/2022-compilation-zidani-riazi/test/input/affect2.o
-ld -m elf_i386 -o prog $fileo
+ld -m elf_i386 -o affect2 $fileo

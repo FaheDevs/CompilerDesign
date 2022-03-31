@@ -59,7 +59,9 @@ public class Ig {
 			}
 		}
 
-    }
+
+
+	}
 	private void colorat(int[] colors, NasmOperand operand) {
 		if (operand == null) return;
 		if (operand instanceof NasmAddress) {
@@ -74,29 +76,23 @@ public class Ig {
 	}
 
     public int[] getPrecoloredTemporaries() {
-		int[] colors = new int[regNb];
-		//NasmRegister reg;
-			//nasm.sectionText.stream().flatMap(instruction -> Stream.of(instruction.source, instruction.destination)).forEach(operand -> colorat(colors, operand));
-		for (NasmInst inst : nasm.sectionText) {
-				colorat(colors, inst.source);
-				colorat(colors, inst.destination);
-		}
+		int[] couleur = new int[regNb];
+		nasm.sectionText.stream()
+				.flatMap(instruction -> Stream.of(instruction.source, instruction.destination))
+				.forEach(operand -> colorat(couleur, operand));
+		return couleur;
 
-		return colors;
-    }
+	}
 
 
     public void allocateRegisters(){
-		ColorGraph colorGraph = new ColorGraph(graph, 4, getPrecoloredTemporaries());
-		colorGraph.color();
-		int[] colors = colorGraph.color;
-
+		int[] couleur = new ColorGraph(graph, 4, getPrecoloredTemporaries()).color;
 		for (NasmInst inst: nasm.sectionText) {
-			allocateRegister(colors, inst.source);
-			allocateRegister(colors, inst.destination);
+			allocateRegister(couleur, inst.source);
+			allocateRegister(couleur, inst.destination);
 		}
-	}
 
+	}
 	private void allocateRegister(int[] colors, NasmOperand operand) {
 		if (operand == null) return;
 
@@ -106,11 +102,11 @@ public class Ig {
 			allocateRegister(colors, address.offset);
 		}
 
-		if (operand.isGeneralRegister()) {
+		if (operand.isGeneralRegister()){
 			NasmRegister register = (NasmRegister) operand;
-			if (register.color == Nasm.REG_UNK)
-				register.colorRegister(colors[register.val]);
+			if (register.color == Nasm.REG_UNK) register.colorRegister(colors[register.val]);
 		}
+
 	}
 
 	private int getRegister(int color) {
