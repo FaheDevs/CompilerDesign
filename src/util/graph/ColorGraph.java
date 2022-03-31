@@ -43,7 +43,6 @@ public class ColorGraph {
         while (!stack.empty()) {
             int s = stack.pop();
             IntSet C = neighborsColor(s);
-
             if (C.getSize() != colorNb - countColored())
                 color[s] = chooseAvailableColor(C);
         }
@@ -57,7 +56,6 @@ public class ColorGraph {
     public IntSet neighborsColor(int t)
     {
         IntSet colorSet = new IntSet(colorNb);
-
         for(NodeList p = int2Node[t].adj(); p!=null; p=p.tail)
             if(color[p.head.label()] != NOCOLOR)
                 colorSet.add(color[p.head.label()]);
@@ -74,7 +72,6 @@ public class ColorGraph {
     {
         for (int i = 0; i < colorNb; i++)
             if (!colorSet.isMember(i)) return i;
-
         return NOCOLOR;
 
     }
@@ -86,7 +83,7 @@ public class ColorGraph {
     public int neighborsNb(int t)
     {
         int nb = 0;
-        for(NodeList p = this.int2Node[t].succ(); p!=null; p=p.tail)
+        for(NodeList p = this.int2Node[t].adj(); p!=null; p=p.tail)
             if(!removed.isMember(p.head.label()))
                 nb++;
         return nb;
@@ -106,19 +103,18 @@ public class ColorGraph {
     }
     public int simplify()
     {
-        int N = vertexNb - countColored();
         boolean modif = true;
 
-        while (stack.size() != N && modif) {
+        while (stack.size() != vertexNb - countColored() && modif) {
             modif = false;
 
             for (int s = 0; s < int2Node.length; s++) {
-                if (neighborsNb(s) >= colorNb || removed.isMember(s) || color[s] != NOCOLOR) {
-                    continue;
+                if (neighborsNb(s) < colorNb && color[s] != NOCOLOR) {
+                    stack.add(s);
+                    removed.add(s);
+                    modif = true;
                 }
-                stack.add(s);
-                removed.add(s);
-                modif = true;
+
             }
         }
         return stack.size();
@@ -128,16 +124,15 @@ public class ColorGraph {
     /*-------------------------------------------------------------------------------------------------------------*/
     private int chooseVertex() {
         for (int s = 0; s < int2Node.length; s++)
-            // pas besoin de vérifier deborde : si x est dans déborde, alors il est dans enleves
             if (!removed.isMember(s) && color[s] == NOCOLOR) return s;
 
         return -1;
     }
     public void spill()
     {
-        while (stack.size() != vertexNb - countColored()) {
+        while (stack.size() != vertexNb) {
             int s = chooseVertex();
-            if (s < 0) throw new RuntimeException("Could not find a vertex."); // TODO
+            if (s < 0) throw new RuntimeException("Could not find a vertex.");
             stack.add(s);
             removed.add(s);
             spill.add(s);

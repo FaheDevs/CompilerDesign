@@ -6,7 +6,6 @@ import util.graph.*;
 import util.intset.*;
 import java.util.*;
 import java.io.*;
-import java.util.stream.Stream;
 
 public class Ig {
     public Graph graph;
@@ -62,51 +61,23 @@ public class Ig {
 
 
 	}
-	private void colorat(int[] colors, NasmOperand operand) {
-		if (operand == null) return;
-		if (operand instanceof NasmAddress) {
-			NasmAddress address = (NasmAddress) operand;
-			colorat(colors, address.base);
-			colorat(colors, address.offset);
-		}
-		if (operand.isGeneralRegister()) {
-			NasmRegister register = (NasmRegister) operand;
-			colors[register.val] = register.color;
-		}
-	}
 
     public int[] getPrecoloredTemporaries() {
 		int[] couleur = new int[regNb];
-		nasm.sectionText.stream()
-				.flatMap(instruction -> Stream.of(instruction.source, instruction.destination))
-				.forEach(operand -> colorat(couleur, operand));
+		NasmRegister r;
+		for (NasmInst inst : nasm.sectionText) {
+			if(inst.destination != null && inst.source != null) {
+				if (inst.source.isGeneralRegister()) {
+					r = (NasmRegister) inst.source;
+					couleur[r.val] = r.color;
+				}
+				if (inst.destination.isGeneralRegister()) {
+					r = (NasmRegister) inst.destination;
+					couleur[r.val] = r.color;
+				}
+			}
+		}
 		return couleur;
-
-	}
-
-
-    public void allocateRegisters(){
-		int[] couleur = new ColorGraph(graph, 4, getPrecoloredTemporaries()).color;
-		for (NasmInst inst: nasm.sectionText) {
-			allocateRegister(couleur, inst.source);
-			allocateRegister(couleur, inst.destination);
-		}
-
-	}
-	private void allocateRegister(int[] colors, NasmOperand operand) {
-		if (operand == null) return;
-
-		if (operand instanceof NasmAddress) {
-			NasmAddress address = (NasmAddress) operand;
-			allocateRegister(colors, address.base);
-			allocateRegister(colors, address.offset);
-		}
-
-		if (operand.isGeneralRegister()){
-			NasmRegister register = (NasmRegister) operand;
-			if (register.color == Nasm.REG_UNK) register.colorRegister(colors[register.val]);
-		}
-
 	}
 
 	private int getRegister(int color) {
@@ -123,6 +94,24 @@ public class Ig {
 				return -1;
 		}
 	}
+
+    public void allocateRegisters(){
+		int[] couleur = new ColorGraph(graph, 4, getPrecoloredTemporaries()).color;
+		NasmRegister r;
+		for (NasmInst inst : nasm.sectionText) {
+			if (inst.destination != null && inst.source != null) {
+				if (inst.source.isGeneralRegister()) {
+					r = (NasmRegister) inst.source;
+					r.colorRegister(getRegister(couleur[r.val]));
+				}
+				if (inst.destination.isGeneralRegister()) {
+					r = (NasmRegister) inst.destination;
+					r.colorRegister(getRegister(couleur[r.val]));
+				}
+			}
+		}
+	}
+
 
     public void affiche(String baseFileName){
 	String fileName;
