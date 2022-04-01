@@ -39,6 +39,8 @@ lire = 'lire';
 ecrire = 'ecrire';
 nombre = chiffre+;
 identif = alpha alphanum*;
+point_intero = '?';
+points = ':';
 
 Ignored Tokens
 
@@ -85,6 +87,7 @@ inst =
 {instappel } instappel |
 {instretour } instretour |
 {instecriture } instecriture |
+{instincr} instincr |
 {instvide} instvide ;
 
 instaffect = var egale exp point_virgule ;
@@ -112,6 +115,11 @@ instecriture = ecrire parenthese_ouvrante exp parenthese_fermante point_virgule 
 
 instvide = point_virgule ;
 
+instincr =  var plus egale exp point_virgule;
+
+
+
+
 
 exp =
 {ou} exp ou t1 |
@@ -138,9 +146,12 @@ t4 =
 
 t5 =
 {non} non t5 |
-{t6} t6 ;
+{ter} crochet_ouvrant t5 crochet_fermant point_intero t6 points t7 |
+{t7} t7 ;
 
-t6 =
+t6 = t7;
+
+t7 =
  {nombre} nombre |
  {appelf} appelf |
  {var} var |

@@ -23,7 +23,75 @@ public class Sc2sa extends DepthFirstAdapter {
         node.getEOF().apply(this);
         outStart(node);
     }
-
+    //===========INCR
+    public void caseAInstincrInst(AInstincrInst node){
+        inAInstincrInst(node);
+        if (node.getInstincr() != null){
+            node.getInstincr().apply(this);
+        }
+        outAInstincrInst(node);
+    }
+    @Override
+    public void caseAInstincr(AInstincr node){
+        SaVar var = null;
+        SaExp exp = null;
+        inAInstincr(node);
+        if (node.getVar() != null){
+            node.getVar().apply(this);
+            var = (SaVar) this.returnValue;
+        }
+        if (node.getPlus() != null){
+            node.getPlus().apply(this);
+        }
+        if (node.getEgale() != null){
+            node.getEgale().apply(this);
+        }
+        if (node.getExp() != null){
+            node.getExp().apply(this);
+            exp = (SaExp) this.returnValue;
+        }
+        if (node.getPointVirgule() != null){
+            node.getPointVirgule().apply(this);
+        }
+        this.returnValue = new SaInstIncremente(var, exp);
+        outAInstincr(node);
+    }
+    //===========INCR
+    //===========ternaire
+    @Override
+    public void caseATerT5(ATerT5 node) {
+        SaExp exp = null;
+        SaExp oui = null;
+        SaExp non = null;
+        inATerT5(node);
+        if(node.getCrochetOuvrant() != null) {
+            node.getCrochetOuvrant().apply(this);
+        }
+        if(node.getT5() != null) {
+            node.getT5().apply(this);
+            exp = (SaExp) this.returnValue;
+        }
+        if(node.getCrochetFermant() != null) {
+            node.getCrochetFermant().apply(this);
+        }
+        if(node.getPointIntero() != null) {
+            node.getPointIntero().apply(this);
+        }
+        if(node.getT6() != null) {
+            node.getT6().apply(this);
+            oui = (SaExp) this.returnValue;
+        }
+        if(node.getPoints() != null) {
+            node.getPointIntero().apply(this);
+        }
+        if(node.getT7() != null) {
+            node.getT7().apply(this);
+            non = (SaExp) this.returnValue;
+        }
+        this.returnValue = new SaExpOptTer(exp, oui, non);
+        outATerT5(node);
+    }
+    //===========ternaire
     @Override
     public void caseALdfDvglobalsProgramme(ALdfDvglobalsProgramme node){
         SaLDec var = null;
@@ -768,53 +836,53 @@ public class Sc2sa extends DepthFirstAdapter {
         outANonT5(node);
     }
     @Override
-    public void caseAT6T5(AT6T5 node) {
-        inAT6T5(node);
-        if(node.getT6() != null) {
-            node.getT6().apply(this);
+    public void caseAT7T5(AT7T5 node) {
+        inAT7T5(node);
+        if(node.getT7() != null) {
+            node.getT7().apply(this);
         }
-        outAT6T5(node);
+        outAT7T5(node);
     }
 
     @Override
-    public void caseANombreT6(ANombreT6 node) {
+    public void caseANombreT7(ANombreT7 node) {
         Integer val = null;
-        inANombreT6(node);
+        inANombreT7(node);
         if(node.getNombre() != null) {
             node.getNombre().apply(this);
             val = Integer.parseInt(node.getNombre().getText());
         }
         this.returnValue = new SaExpInt(val);
-        outANombreT6(node);
+        outANombreT7(node);
     }
 
     @Override
-    public void caseAVarT6(AVarT6 node) {
+    public void caseAVarT7(AVarT7 node) {
         SaVar var = null;
-        inAVarT6(node);
+        inAVarT7(node);
         if(node.getVar() != null) {
             node.getVar().apply(this);
             var = (SaVar) this.returnValue;
         }
         this.returnValue = new SaExpVar(var);
-        outAVarT6(node);
+        outAVarT7(node);
     }
 
     @Override
-    public void caseAAppelfT6(AAppelfT6 node) {
+    public void caseAAppelfT7(AAppelfT7 node) {
         SaAppel appel = null;
-        inAAppelfT6(node);
+        inAAppelfT7(node);
         if(node.getAppelf() != null) {
             node.getAppelf().apply(this);
             appel = (SaAppel) this.returnValue;
         }
         this.returnValue = new SaExpAppel(appel);
-        outAAppelfT6(node);
+        outAAppelfT7(node);
     }
 
     @Override
-    public void caseAParT6(AParT6 node) {
-        inAParT6(node);
+    public void caseAParT7(AParT7 node) {
+        inAParT7(node);
         if(node.getParentheseOuvrante() != null) {
             node.getParentheseOuvrante().apply(this);
         }
@@ -824,18 +892,18 @@ public class Sc2sa extends DepthFirstAdapter {
         if(node.getParentheseFermante() != null) {
             node.getParentheseFermante().apply(this);
         }
-        outAParT6(node);
+        outAParT7(node);
     }
     @Override
-    public void caseALireT6(ALireT6 node) {
-        inALireT6(node);
+    public void caseALireT7(ALireT7 node) {
+        inALireT7(node);
         if(node.getParentheseOuvrante() != null) {
             node.getParentheseOuvrante().apply(this);
         }
         if(node.getParentheseFermante() != null) {
             node.getParentheseFermante().apply(this);
         }
-        outALireT6(node);
+        outALireT7(node);
     }
 
     @Override

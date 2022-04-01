@@ -34,6 +34,7 @@ public interface Analysis extends Switch
     void caseAInstappelInst(AInstappelInst node);
     void caseAInstretourInst(AInstretourInst node);
     void caseAInstecritureInst(AInstecritureInst node);
+    void caseAInstincrInst(AInstincrInst node);
     void caseAInstvideInst(AInstvideInst node);
     void caseAInstaffect(AInstaffect node);
     void caseAInstbloc(AInstbloc node);
@@ -47,6 +48,7 @@ public interface Analysis extends Switch
     void caseAInstretour(AInstretour node);
     void caseAInstecriture(AInstecriture node);
     void caseAInstvide(AInstvide node);
+    void caseAInstincr(AInstincr node);
     void caseAOuExp(AOuExp node);
     void caseAT1Exp(AT1Exp node);
     void caseAEtT1(AEtT1 node);
@@ -61,12 +63,14 @@ public interface Analysis extends Switch
     void caseADiviseT4(ADiviseT4 node);
     void caseAT5T4(AT5T4 node);
     void caseANonT5(ANonT5 node);
-    void caseAT6T5(AT6T5 node);
-    void caseANombreT6(ANombreT6 node);
-    void caseAAppelfT6(AAppelfT6 node);
-    void caseAVarT6(AVarT6 node);
-    void caseAParT6(AParT6 node);
-    void caseALireT6(ALireT6 node);
+    void caseATerT5(ATerT5 node);
+    void caseAT7T5(AT7T5 node);
+    void caseAT6(AT6 node);
+    void caseANombreT7(ANombreT7 node);
+    void caseAAppelfT7(AAppelfT7 node);
+    void caseAVarT7(AVarT7 node);
+    void caseAParT7(AParT7 node);
+    void caseALireT7(ALireT7 node);
     void caseATabVar(ATabVar node);
     void caseAVarVar(AVarVar node);
     void caseALexpLexp(ALexpLexp node);
@@ -105,6 +109,8 @@ public interface Analysis extends Switch
     void caseTEcrire(TEcrire node);
     void caseTNombre(TNombre node);
     void caseTIdentif(TIdentif node);
+    void caseTPointIntero(TPointIntero node);
+    void caseTPoints(TPoints node);
     void caseEOF(EOF node);
     void caseInvalidToken(InvalidToken node);
 }

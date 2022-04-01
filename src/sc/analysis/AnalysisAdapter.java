@@ -207,6 +207,12 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
+    public void caseAInstincrInst(AInstincrInst node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
     public void caseAInstvideInst(AInstvideInst node)
     {
         defaultCase(node);
@@ -280,6 +286,12 @@ public class AnalysisAdapter implements Analysis
 
     @Override
     public void caseAInstvide(AInstvide node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseAInstincr(AInstincr node)
     {
         defaultCase(node);
     }
@@ -369,37 +381,49 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseAT6T5(AT6T5 node)
+    public void caseATerT5(ATerT5 node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseANombreT6(ANombreT6 node)
+    public void caseAT7T5(AT7T5 node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseAAppelfT6(AAppelfT6 node)
+    public void caseAT6(AT6 node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseAVarT6(AVarT6 node)
+    public void caseANombreT7(ANombreT7 node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseAParT6(AParT6 node)
+    public void caseAAppelfT7(AAppelfT7 node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseALireT6(ALireT6 node)
+    public void caseAVarT7(AVarT7 node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseAParT7(AParT7 node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseALireT7(ALireT7 node)
     {
         defaultCase(node);
     }
@@ -622,6 +646,18 @@ public class AnalysisAdapter implements Analysis
 
     @Override
     public void caseTIdentif(TIdentif node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTPointIntero(TPointIntero node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTPoints(TPoints node)
     {
         defaultCase(node);
     }

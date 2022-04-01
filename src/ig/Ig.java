@@ -45,7 +45,7 @@ public class Ig {
 				if (!sommets.get(0).equals(sommets.get(1))){
 					Node from = int2Node[sommets.get(0)];
 					Node to = int2Node[sommets.get(1)];
-					graph.addNOEdge(from, to);
+					graph.addEdge(from, to);
 				}
 			}
 			//out Edge
@@ -53,7 +53,7 @@ public class Ig {
 				if (!sommets.get(0).equals(sommets.get(1))){
 					Node from = int2Node[sommets.get(0)];
 					Node to = int2Node[sommets.get(1)];
-					graph.addNOEdge(from, to);
+					graph.addEdge(from, to);
 				}
 			}
 		}

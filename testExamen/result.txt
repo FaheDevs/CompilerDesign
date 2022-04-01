@@ -1,0 +1,240 @@
+Évaluation de Diff de sa :
+9/14 correct ( 64.29%)
+	incremente1.sa   CORRECT
+	incremente2.sa   CORRECT
+	incremente3.sa   CORRECT
+	incremente4.sa   CORRECT
+	incremente5.sa   CORRECT
+	optTer1.sa       CORRECT
+	optTer2.sa       CORRECT
+	optTer4.sa       CORRECT
+	optTer7.sa       CORRECT
+	optTer3.sa   NON-EXISTANT
+	optTer5.sa   NON-EXISTANT
+	optTer6.sa   NON-EXISTANT
+	optTer8.sa   NON-EXISTANT
+	optTer9.sa   NON-EXISTANT
+Évaluation de Diff de ts :
+9/14 correct ( 64.29%)
+	incremente1.ts   CORRECT
+	incremente2.ts   CORRECT
+	incremente3.ts   CORRECT
+	incremente4.ts   CORRECT
+	incremente5.ts   CORRECT
+	optTer1.ts       CORRECT
+	optTer2.ts       CORRECT
+	optTer4.ts       CORRECT
+	optTer7.ts       CORRECT
+	optTer3.ts   NON-EXISTANT
+	optTer5.ts   NON-EXISTANT
+	optTer6.ts   NON-EXISTANT
+	optTer8.ts   NON-EXISTANT
+	optTer9.ts   NON-EXISTANT
+Évaluation de Execution de sa :
+5/14 correct ( 35.71%)
+	incremente4.saout   CORRECT
+	incremente5.saout   CORRECT
+	optTer1.saout       CORRECT
+	optTer2.saout       CORRECT
+	optTer7.saout       CORRECT
+	incremente1.saout   INCORRECT
+	incremente2.saout   INCORRECT
+	incremente3.saout   INCORRECT
+	optTer4.saout       INCORRECT
+	optTer3.saout   NON-EXISTANT
+	optTer5.saout   NON-EXISTANT
+	optTer6.saout   NON-EXISTANT
+	optTer8.saout   NON-EXISTANT
+	optTer9.saout   NON-EXISTANT
+Évaluation de Diff de c3a :
+0/14 correct (  0.00%)
+	incremente1.c3a   INCORRECT
+	incremente2.c3a   INCORRECT
+	incremente3.c3a   INCORRECT
+	incremente4.c3a   INCORRECT
+	incremente5.c3a   INCORRECT
+	optTer1.c3a       INCORRECT
+	optTer2.c3a       INCORRECT
+	optTer4.c3a       INCORRECT
+	optTer7.c3a       INCORRECT
+	optTer3.c3a   NON-EXISTANT
+	optTer5.c3a   NON-EXISTANT
+	optTer6.c3a   NON-EXISTANT
+	optTer8.c3a   NON-EXISTANT
+	optTer9.c3a   NON-EXISTANT
+Évaluation de Execution du c3a :
+0/14 correct (  0.00%)
+	incremente1.c3aout   INCORRECT
+	incremente2.c3aout   INCORRECT
+	incremente3.c3aout   INCORRECT
+	incremente4.c3aout   INCORRECT
+	incremente5.c3aout   INCORRECT
+	optTer1.c3aout       INCORRECT
+	optTer2.c3aout       INCORRECT
+	optTer4.c3aout       INCORRECT
+	optTer7.c3aout       INCORRECT
+	optTer3.c3aout   NON-EXISTANT
+	optTer5.c3aout   NON-EXISTANT
+	optTer6.c3aout   NON-EXISTANT
+	optTer8.c3aout   NON-EXISTANT
+	optTer9.c3aout   NON-EXISTANT
+Évaluation de Diff de pre-nasm :
+0/14 correct (  0.00%)
+	incremente1.pre-nasm   INCORRECT
+	incremente2.pre-nasm   INCORRECT
+	incremente3.pre-nasm   INCORRECT
+	incremente4.pre-nasm   INCORRECT
+	incremente5.pre-nasm   INCORRECT
+	optTer1.pre-nasm   NON-EXISTANT
+	optTer2.pre-nasm   NON-EXISTANT
+	optTer3.pre-nasm   NON-EXISTANT
+	optTer4.pre-nasm   NON-EXISTANT
+	optTer5.pre-nasm   NON-EXISTANT
+	optTer6.pre-nasm   NON-EXISTANT
+	optTer7.pre-nasm   NON-EXISTANT
+	optTer8.pre-nasm   NON-EXISTANT
+	optTer9.pre-nasm   NON-EXISTANT
+Évaluation de Execution du pre-nasm :
+0/14 correct (  0.00%)
+	incremente1.pre-nasmout   INCORRECT
+	incremente2.pre-nasmout   INCORRECT
+	incremente3.pre-nasmout   INCORRECT
+	incremente4.pre-nasmout   INCORRECT
+	incremente5.pre-nasmout   INCORRECT
+	optTer1.pre-nasmout   NON-EXISTANT
+	optTer2.pre-nasmout   NON-EXISTANT
+	optTer3.pre-nasmout   NON-EXISTANT
+	optTer4.pre-nasmout   NON-EXISTANT
+	optTer5.pre-nasmout   NON-EXISTANT
+	optTer6.pre-nasmout   NON-EXISTANT
+	optTer7.pre-nasmout   NON-EXISTANT
+	optTer8.pre-nasmout   NON-EXISTANT
+	optTer9.pre-nasmout   NON-EXISTANT
+Évaluation de Diff de nasm :
+0/14 correct (  0.00%)
+	incremente1.nasm   INCORRECT
+	incremente2.nasm   INCORRECT
+	incremente3.nasm   INCORRECT
+	incremente4.nasm   INCORRECT
+	incremente5.nasm   INCORRECT
+	optTer1.nasm   NON-EXISTANT
+	optTer2.nasm   NON-EXISTANT
+	optTer3.nasm   NON-EXISTANT
+	optTer4.nasm   NON-EXISTANT
+	optTer5.nasm   NON-EXISTANT
+	optTer6.nasm   NON-EXISTANT
+	optTer7.nasm   NON-EXISTANT
+	optTer8.nasm   NON-EXISTANT
+	optTer9.nasm   NON-EXISTANT
+Évaluation de Execution du nasm :
+0/14 correct (  0.00%)
+	incremente1.nasmout   INCORRECT
+	incremente2.nasmout   INCORRECT
+	incremente3.nasmout   INCORRECT
+	incremente4.nasmout   INCORRECT
+	incremente5.nasmout   INCORRECT
+	optTer1.nasmout   NON-EXISTANT
+	optTer2.nasmout   NON-EXISTANT
+	optTer3.nasmout   NON-EXISTANT
+	optTer4.nasmout   NON-EXISTANT
+	optTer5.nasmout   NON-EXISTANT
+	optTer6.nasmout   NON-EXISTANT
+	optTer7.nasmout   NON-EXISTANT
+	optTer8.nasmout   NON-EXISTANT
+	optTer9.nasmout   NON-EXISTANT
+Évaluation de Execution du binaire :
+0/14 correct (  0.00%)
+------------------------------EVALUATION ERRORS------------------------------
+ERROR evaluateC3a for input incremente1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op2" is null
+	at c3a.C3aEval.visit(C3aEval.java:211)
+	at c3a.C3aEval.visit(C3aEval.java:6)
+	at c3a.C3aInstAdd.accept(C3aInstAdd.java:23)
+	at c3a.C3aEval.<init>(C3aEval.java:64)
+	at C3aVM.run(C3aVM.java:31)
+	at C3aVM.main(C3aVM.java:59)
+'
+
+ERROR evaluateC3a for input incremente2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op2" is null
+	at c3a.C3aEval.visit(C3aEval.java:211)
+	at c3a.C3aEval.visit(C3aEval.java:6)
+	at c3a.C3aInstAdd.accept(C3aInstAdd.java:23)
+	at c3a.C3aEval.<init>(C3aEval.java:64)
+	at C3aVM.run(C3aVM.java:31)
+	at C3aVM.main(C3aVM.java:59)
+'
+
+ERROR evaluateC3a for input incremente3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op2" is null
+	at c3a.C3aEval.visit(C3aEval.java:211)
+	at c3a.C3aEval.visit(C3aEval.java:6)
+	at c3a.C3aInstAdd.accept(C3aInstAdd.java:23)
+	at c3a.C3aEval.<init>(C3aEval.java:64)
+	at C3aVM.run(C3aVM.java:31)
+	at C3aVM.main(C3aVM.java:59)
+'
+
+ERROR evaluateC3a for input incremente4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op2" is null
+	at c3a.C3aEval.visit(C3aEval.java:211)
+	at c3a.C3aEval.visit(C3aEval.java:6)
+	at c3a.C3aInstAdd.accept(C3aInstAdd.java:23)
+	at c3a.C3aEval.<init>(C3aEval.java:64)
+	at C3aVM.run(C3aVM.java:31)
+	at C3aVM.main(C3aVM.java:59)
+'
+
+ERROR evaluateC3a for input optTer1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:159)
+	at c3a.C3aEval.visit(C3aEval.java:6)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:293)
+	at c3a.C3aEval.visit(C3aEval.java:6)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
+	at c3a.C3aEval.<init>(C3aEval.java:64)
+	at C3aVM.run(C3aVM.java:31)
+	at C3aVM.main(C3aVM.java:59)
+'
+
+ERROR evaluateC3a for input optTer2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:159)
+	at c3a.C3aEval.visit(C3aEval.java:6)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:293)
+	at c3a.C3aEval.visit(C3aEval.java:6)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
+	at c3a.C3aEval.<init>(C3aEval.java:64)
+	at C3aVM.run(C3aVM.java:31)
+	at C3aVM.main(C3aVM.java:59)
+'
+
+ERROR evaluateC3a for input optTer4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:159)
+	at c3a.C3aEval.visit(C3aEval.java:6)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:293)
+	at c3a.C3aEval.visit(C3aEval.java:6)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
+	at c3a.C3aEval.<init>(C3aEval.java:64)
+	at C3aVM.run(C3aVM.java:31)
+	at C3aVM.main(C3aVM.java:59)
+'
+
+ERROR evaluateC3a for input optTer7.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:159)
+	at c3a.C3aEval.visit(C3aEval.java:6)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:211)
+	at c3a.C3aEval.visit(C3aEval.java:6)
+	at c3a.C3aInstAdd.accept(C3aInstAdd.java:23)
+	at c3a.C3aEval.<init>(C3aEval.java:64)
+	at C3aVM.run(C3aVM.java:31)
+	at C3aVM.main(C3aVM.java:59)
+'
+
+ERROR evaluateExecutable for input incremente1.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input incremente2.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input incremente3.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input incremente4.l : 'b'/bin/sh: 1: nasm: not found\n''
+
+ERROR evaluateExecutable for input incremente5.l : 'b'/bin/sh: 1: nasm: not found\n''

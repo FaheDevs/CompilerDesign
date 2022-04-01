@@ -56,7 +56,7 @@ public class ColorGraph {
     public IntSet neighborsColor(int t)
     {
         IntSet colorSet = new IntSet(colorNb);
-        for(NodeList p = int2Node[t].adj(); p!=null; p=p.tail)
+        for(NodeList p = int2Node[t].succ(); p!=null; p=p.tail)
             if(color[p.head.label()] != NOCOLOR)
                 colorSet.add(color[p.head.label()]);
         return colorSet;

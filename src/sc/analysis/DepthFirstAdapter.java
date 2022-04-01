@@ -574,6 +574,27 @@ public class DepthFirstAdapter extends AnalysisAdapter
         outAInstecritureInst(node);
     }
 
+    public void inAInstincrInst(AInstincrInst node)
+    {
+        defaultIn(node);
+    }
+
+    public void outAInstincrInst(AInstincrInst node)
+    {
+        defaultOut(node);
+    }
+
+    @Override
+    public void caseAInstincrInst(AInstincrInst node)
+    {
+        inAInstincrInst(node);
+        if(node.getInstincr() != null)
+        {
+            node.getInstincr().apply(this);
+        }
+        outAInstincrInst(node);
+    }
+
     public void inAInstvideInst(AInstvideInst node)
     {
         defaultIn(node);
@@ -939,6 +960,43 @@ public class DepthFirstAdapter extends AnalysisAdapter
         outAInstvide(node);
     }
 
+    public void inAInstincr(AInstincr node)
+    {
+        defaultIn(node);
+    }
+
+    public void outAInstincr(AInstincr node)
+    {
+        defaultOut(node);
+    }
+
+    @Override
+    public void caseAInstincr(AInstincr node)
+    {
+        inAInstincr(node);
+        if(node.getVar() != null)
+        {
+            node.getVar().apply(this);
+        }
+        if(node.getPlus() != null)
+        {
+            node.getPlus().apply(this);
+        }
+        if(node.getEgale() != null)
+        {
+            node.getEgale().apply(this);
+        }
+        if(node.getExp() != null)
+        {
+            node.getExp().apply(this);
+        }
+        if(node.getPointVirgule() != null)
+        {
+            node.getPointVirgule().apply(this);
+        }
+        outAInstincr(node);
+    }
+
     public void inAOuExp(AOuExp node)
     {
         defaultIn(node);
@@ -1301,104 +1359,170 @@ public class DepthFirstAdapter extends AnalysisAdapter
         outANonT5(node);
     }
 
-    public void inAT6T5(AT6T5 node)
+    public void inATerT5(ATerT5 node)
     {
         defaultIn(node);
     }
 
-    public void outAT6T5(AT6T5 node)
+    public void outATerT5(ATerT5 node)
     {
         defaultOut(node);
     }
 
     @Override
-    public void caseAT6T5(AT6T5 node)
+    public void caseATerT5(ATerT5 node)
     {
-        inAT6T5(node);
+        inATerT5(node);
+        if(node.getCrochetOuvrant() != null)
+        {
+            node.getCrochetOuvrant().apply(this);
+        }
+        if(node.getT5() != null)
+        {
+            node.getT5().apply(this);
+        }
+        if(node.getCrochetFermant() != null)
+        {
+            node.getCrochetFermant().apply(this);
+        }
+        if(node.getPointIntero() != null)
+        {
+            node.getPointIntero().apply(this);
+        }
         if(node.getT6() != null)
         {
             node.getT6().apply(this);
         }
-        outAT6T5(node);
+        if(node.getPoints() != null)
+        {
+            node.getPoints().apply(this);
+        }
+        if(node.getT7() != null)
+        {
+            node.getT7().apply(this);
+        }
+        outATerT5(node);
     }
 
-    public void inANombreT6(ANombreT6 node)
+    public void inAT7T5(AT7T5 node)
     {
         defaultIn(node);
     }
 
-    public void outANombreT6(ANombreT6 node)
+    public void outAT7T5(AT7T5 node)
     {
         defaultOut(node);
     }
 
     @Override
-    public void caseANombreT6(ANombreT6 node)
+    public void caseAT7T5(AT7T5 node)
     {
-        inANombreT6(node);
+        inAT7T5(node);
+        if(node.getT7() != null)
+        {
+            node.getT7().apply(this);
+        }
+        outAT7T5(node);
+    }
+
+    public void inAT6(AT6 node)
+    {
+        defaultIn(node);
+    }
+
+    public void outAT6(AT6 node)
+    {
+        defaultOut(node);
+    }
+
+    @Override
+    public void caseAT6(AT6 node)
+    {
+        inAT6(node);
+        if(node.getT7() != null)
+        {
+            node.getT7().apply(this);
+        }
+        outAT6(node);
+    }
+
+    public void inANombreT7(ANombreT7 node)
+    {
+        defaultIn(node);
+    }
+
+    public void outANombreT7(ANombreT7 node)
+    {
+        defaultOut(node);
+    }
+
+    @Override
+    public void caseANombreT7(ANombreT7 node)
+    {
+        inANombreT7(node);
         if(node.getNombre() != null)
         {
             node.getNombre().apply(this);
         }
-        outANombreT6(node);
+        outANombreT7(node);
     }
 
-    public void inAAppelfT6(AAppelfT6 node)
+    public void inAAppelfT7(AAppelfT7 node)
     {
         defaultIn(node);
     }
 
-    public void outAAppelfT6(AAppelfT6 node)
+    public void outAAppelfT7(AAppelfT7 node)
     {
         defaultOut(node);
     }
 
     @Override
-    public void caseAAppelfT6(AAppelfT6 node)
+    public void caseAAppelfT7(AAppelfT7 node)
     {
-        inAAppelfT6(node);
+        inAAppelfT7(node);
         if(node.getAppelf() != null)
         {
             node.getAppelf().apply(this);
         }
-        outAAppelfT6(node);
+        outAAppelfT7(node);
     }
 
-    public void inAVarT6(AVarT6 node)
+    public void inAVarT7(AVarT7 node)
     {
         defaultIn(node);
     }
 
-    public void outAVarT6(AVarT6 node)
+    public void outAVarT7(AVarT7 node)
     {
         defaultOut(node);
     }
 
     @Override
-    public void caseAVarT6(AVarT6 node)
+    public void caseAVarT7(AVarT7 node)
     {
-        inAVarT6(node);
+        inAVarT7(node);
         if(node.getVar() != null)
         {
             node.getVar().apply(this);
         }
-        outAVarT6(node);
+        outAVarT7(node);
     }
 
-    public void inAParT6(AParT6 node)
+    public void inAParT7(AParT7 node)
     {
         defaultIn(node);
     }
 
-    public void outAParT6(AParT6 node)
+    public void outAParT7(AParT7 node)
     {
         defaultOut(node);
     }
 
     @Override
-    public void caseAParT6(AParT6 node)
+    public void caseAParT7(AParT7 node)
     {
-        inAParT6(node);
+        inAParT7(node);
         if(node.getParentheseOuvrante() != null)
         {
             node.getParentheseOuvrante().apply(this);
@@ -1411,23 +1535,23 @@ public class DepthFirstAdapter extends AnalysisAdapter
         {
             node.getParentheseFermante().apply(this);
         }
-        outAParT6(node);
+        outAParT7(node);
     }
 
-    public void inALireT6(ALireT6 node)
+    public void inALireT7(ALireT7 node)
     {
         defaultIn(node);
     }
 
-    public void outALireT6(ALireT6 node)
+    public void outALireT7(ALireT7 node)
     {
         defaultOut(node);
     }
 
     @Override
-    public void caseALireT6(ALireT6 node)
+    public void caseALireT7(ALireT7 node)
     {
-        inALireT6(node);
+        inALireT7(node);
         if(node.getLire() != null)
         {
             node.getLire().apply(this);
@@ -1440,7 +1564,7 @@ public class DepthFirstAdapter extends AnalysisAdapter
         {
             node.getParentheseFermante().apply(this);
         }
-        outALireT6(node);
+        outALireT7(node);
     }
 
     public void inATabVar(ATabVar node)
