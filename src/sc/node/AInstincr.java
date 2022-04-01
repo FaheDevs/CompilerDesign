@@ -8,8 +8,7 @@ import sc.analysis.*;
 public final class AInstincr extends PInstincr
 {
     private PVar _var_;
-    private TPlus _plus_;
-    private TEgale _egale_;
+    private TInc _inc_;
     private PExp _exp_;
     private TPointVirgule _pointVirgule_;
 
@@ -20,17 +19,14 @@ public final class AInstincr extends PInstincr
 
     public AInstincr(
         @SuppressWarnings("hiding") PVar _var_,
-        @SuppressWarnings("hiding") TPlus _plus_,
-        @SuppressWarnings("hiding") TEgale _egale_,
+        @SuppressWarnings("hiding") TInc _inc_,
         @SuppressWarnings("hiding") PExp _exp_,
         @SuppressWarnings("hiding") TPointVirgule _pointVirgule_)
     {
         // Constructor
         setVar(_var_);
 
-        setPlus(_plus_);
-
-        setEgale(_egale_);
+        setInc(_inc_);
 
         setExp(_exp_);
 
@@ -43,8 +39,7 @@ public final class AInstincr extends PInstincr
     {
         return new AInstincr(
             cloneNode(this._var_),
-            cloneNode(this._plus_),
-            cloneNode(this._egale_),
+            cloneNode(this._inc_),
             cloneNode(this._exp_),
             cloneNode(this._pointVirgule_));
     }
@@ -80,16 +75,16 @@ public final class AInstincr extends PInstincr
         this._var_ = node;
     }
 
-    public TPlus getPlus()
+    public TInc getInc()
     {
-        return this._plus_;
+        return this._inc_;
     }
 
-    public void setPlus(TPlus node)
+    public void setInc(TInc node)
     {
-        if(this._plus_ != null)
+        if(this._inc_ != null)
         {
-            this._plus_.parent(null);
+            this._inc_.parent(null);
         }
 
         if(node != null)
@@ -102,32 +97,7 @@ public final class AInstincr extends PInstincr
             node.parent(this);
         }
 
-        this._plus_ = node;
-    }
-
-    public TEgale getEgale()
-    {
-        return this._egale_;
-    }
-
-    public void setEgale(TEgale node)
-    {
-        if(this._egale_ != null)
-        {
-            this._egale_.parent(null);
-        }
-
-        if(node != null)
-        {
-            if(node.parent() != null)
-            {
-                node.parent().removeChild(node);
-            }
-
-            node.parent(this);
-        }
-
-        this._egale_ = node;
+        this._inc_ = node;
     }
 
     public PExp getExp()
@@ -185,8 +155,7 @@ public final class AInstincr extends PInstincr
     {
         return ""
             + toString(this._var_)
-            + toString(this._plus_)
-            + toString(this._egale_)
+            + toString(this._inc_)
             + toString(this._exp_)
             + toString(this._pointVirgule_);
     }
@@ -201,15 +170,9 @@ public final class AInstincr extends PInstincr
             return;
         }
 
-        if(this._plus_ == child)
+        if(this._inc_ == child)
         {
-            this._plus_ = null;
-            return;
-        }
-
-        if(this._egale_ == child)
-        {
-            this._egale_ = null;
+            this._inc_ = null;
             return;
         }
 
@@ -238,15 +201,9 @@ public final class AInstincr extends PInstincr
             return;
         }
 
-        if(this._plus_ == oldChild)
+        if(this._inc_ == oldChild)
         {
-            setPlus((TPlus) newChild);
-            return;
-        }
-
-        if(this._egale_ == oldChild)
-        {
-            setEgale((TEgale) newChild);
+            setInc((TInc) newChild);
             return;
         }
 

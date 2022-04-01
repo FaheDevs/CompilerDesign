@@ -40,11 +40,8 @@ public class Sc2sa extends DepthFirstAdapter {
             node.getVar().apply(this);
             var = (SaVar) this.returnValue;
         }
-        if (node.getPlus() != null){
-            node.getPlus().apply(this);
-        }
-        if (node.getEgale() != null){
-            node.getEgale().apply(this);
+        if (node.getInc() != null){
+            node.getInc().apply(this);
         }
         if (node.getExp() != null){
             node.getExp().apply(this);

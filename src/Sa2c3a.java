@@ -91,10 +91,9 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
         defaultIn(node);
         C3aOperand var = node.getLhs().accept(this);
         C3aOperand exp = node.getRhs().accept(this);
-        C3aOperand result = c3a.newTemp();
-        c3a.ajouteInst(new C3aInstAdd(var, exp, result, "Increment"));
+        c3a.ajouteInst(new C3aInstAdd(var, exp, var, "Increment"));
         defaultOut(node);
-        return result;
+        return var;
     }
     //===========INCR
     //===========ternaire
@@ -104,7 +103,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand>{
         C3aLabel oui = c3a.newAutoLabel();
         C3aLabel non = c3a.newAutoLabel();
         C3aOperand exp = node.getTest().accept(this);
-        c3a.ajouteInst(new C3aInstJumpIfEqual(exp, c3a.False, non, ""));
+        c3a.ajouteInst(new C3aInstJumpIfEqual(exp, new C3aConstant(0), non, ""));
         node.getOui().accept(this);
         c3a.addLabelToNextInst(non);
         defaultOut(node);

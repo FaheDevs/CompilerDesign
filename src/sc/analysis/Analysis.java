@@ -111,6 +111,7 @@ public interface Analysis extends Switch
     void caseTIdentif(TIdentif node);
     void caseTPointIntero(TPointIntero node);
     void caseTPoints(TPoints node);
+    void caseTInc(TInc node);
     void caseEOF(EOF node);
     void caseInvalidToken(InvalidToken node);
 }

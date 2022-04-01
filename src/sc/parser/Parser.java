@@ -1450,7 +1450,6 @@ public class Parser
     {
         @SuppressWarnings("hiding") ArrayList<Object> nodeList = new ArrayList<Object>();
 
-        @SuppressWarnings("unused") ArrayList<Object> nodeArrayList5 = pop();
         @SuppressWarnings("unused") ArrayList<Object> nodeArrayList4 = pop();
         @SuppressWarnings("unused") ArrayList<Object> nodeArrayList3 = pop();
         @SuppressWarnings("unused") ArrayList<Object> nodeArrayList2 = pop();
@@ -1459,17 +1458,15 @@ public class Parser
         {
             // Block
         PVar pvarNode2;
-        TPlus tplusNode3;
-        TEgale tegaleNode4;
-        PExp pexpNode5;
-        TPointVirgule tpointvirguleNode6;
+        TInc tincNode3;
+        PExp pexpNode4;
+        TPointVirgule tpointvirguleNode5;
         pvarNode2 = (PVar)nodeArrayList1.get(0);
-        tplusNode3 = (TPlus)nodeArrayList2.get(0);
-        tegaleNode4 = (TEgale)nodeArrayList3.get(0);
-        pexpNode5 = (PExp)nodeArrayList4.get(0);
-        tpointvirguleNode6 = (TPointVirgule)nodeArrayList5.get(0);
+        tincNode3 = (TInc)nodeArrayList2.get(0);
+        pexpNode4 = (PExp)nodeArrayList3.get(0);
+        tpointvirguleNode5 = (TPointVirgule)nodeArrayList4.get(0);
 
-        pinstincrNode1 = new AInstincr(pvarNode2, tplusNode3, tegaleNode4, pexpNode5, tpointvirguleNode6);
+        pinstincrNode1 = new AInstincr(pvarNode2, tincNode3, pexpNode4, tpointvirguleNode5);
         }
 	nodeList.add(pinstincrNode1);
         return nodeList;
@@ -2164,7 +2161,7 @@ public class Parser
 			{{-1, REDUCE, 10}, {22, SHIFT, 1}, {27, SHIFT, 2}, },
 			{{-1, ERROR, 1}, {27, SHIFT, 9}, },
 			{{-1, ERROR, 2}, {5, SHIFT, 10}, },
-			{{-1, ERROR, 3}, {30, ACCEPT, -1}, },
+			{{-1, ERROR, 3}, {31, ACCEPT, -1}, },
 			{{-1, REDUCE, 10}, {27, SHIFT, 2}, },
 			{{-1, ERROR, 5}, {2, SHIFT, 13}, },
 			{{-1, REDUCE, 4}, {0, SHIFT, 14}, },
@@ -2204,7 +2201,7 @@ public class Parser
 			{{-1, REDUCE, 21}, },
 			{{-1, REDUCE, 23}, },
 			{{-1, REDUCE, 22}, },
-			{{-1, ERROR, 43}, {11, SHIFT, 69}, {16, SHIFT, 70}, },
+			{{-1, ERROR, 43}, {11, SHIFT, 69}, {30, SHIFT, 70}, },
 			{{-1, ERROR, 44}, {2, SHIFT, 71}, },
 			{{-1, REDUCE, 11}, },
 			{{-1, REDUCE, 5}, },
@@ -2231,7 +2228,7 @@ public class Parser
 			{{-1, REDUCE, 26}, },
 			{{-1, REDUCE, 25}, },
 			{{-1, ERROR, 69}, {5, SHIFT, 48}, {7, SHIFT, 49}, {15, SHIFT, 50}, {24, SHIFT, 51}, {26, SHIFT, 52}, {27, SHIFT, 31}, },
-			{{-1, ERROR, 70}, {11, SHIFT, 92}, },
+			{{-1, ERROR, 70}, {5, SHIFT, 48}, {7, SHIFT, 49}, {15, SHIFT, 50}, {24, SHIFT, 51}, {26, SHIFT, 52}, {27, SHIFT, 31}, },
 			{{-1, REDUCE, 32}, },
 			{{-1, ERROR, 72}, {6, SHIFT, 93}, {14, SHIFT, 76}, },
 			{{-1, ERROR, 73}, {8, SHIFT, 94}, },
@@ -2253,7 +2250,7 @@ public class Parser
 			{{-1, ERROR, 89}, {6, SHIFT, 109}, },
 			{{-1, ERROR, 90}, {8, SHIFT, 110}, {14, SHIFT, 76}, },
 			{{-1, ERROR, 91}, {2, SHIFT, 111}, {14, SHIFT, 76}, },
-			{{-1, ERROR, 92}, {5, SHIFT, 48}, {7, SHIFT, 49}, {15, SHIFT, 50}, {24, SHIFT, 51}, {26, SHIFT, 52}, {27, SHIFT, 31}, },
+			{{-1, ERROR, 92}, {2, SHIFT, 112}, {14, SHIFT, 76}, },
 			{{-1, REDUCE, 57}, },
 			{{-1, ERROR, 94}, {28, SHIFT, 113}, },
 			{{-1, REDUCE, 58}, },
@@ -2273,18 +2270,17 @@ public class Parser
 			{{-1, REDUCE, 65}, },
 			{{-1, REDUCE, 59}, },
 			{{-1, REDUCE, 24}, },
-			{{-1, ERROR, 112}, {2, SHIFT, 118}, {14, SHIFT, 76}, },
+			{{-1, REDUCE, 36}, },
 			{{-1, ERROR, 113}, {5, SHIFT, 48}, {24, SHIFT, 51}, {26, SHIFT, 52}, {27, SHIFT, 31}, },
 			{{-1, ERROR, 114}, {9, SHIFT, 20}, },
 			{{-1, REDUCE, 28}, },
 			{{-1, REDUCE, 34}, },
 			{{-1, REDUCE, 64}, {0, SHIFT, 107}, {14, SHIFT, 76}, },
-			{{-1, REDUCE, 36}, },
-			{{-1, ERROR, 119}, {29, SHIFT, 123}, },
+			{{-1, ERROR, 118}, {29, SHIFT, 122}, },
 			{{-1, REDUCE, 53}, },
 			{{-1, REDUCE, 30}, },
 			{{-1, REDUCE, 63}, },
-			{{-1, ERROR, 123}, {5, SHIFT, 48}, {24, SHIFT, 51}, {26, SHIFT, 52}, {27, SHIFT, 31}, },
+			{{-1, ERROR, 122}, {5, SHIFT, 48}, {24, SHIFT, 51}, {26, SHIFT, 52}, {27, SHIFT, 31}, },
 			{{-1, REDUCE, 51}, },
         };*/
     private static int[][][] gotoTable;
@@ -2299,7 +2295,7 @@ public class Parser
 			{{-1, 11}, },
 			{{-1, 32}, },
 			{{-1, 33}, },
-			{{-1, 34}, {11, 22}, {21, 45}, {77, 97}, {85, 105}, {114, 121}, },
+			{{-1, 34}, {11, 22}, {21, 45}, {77, 97}, {85, 105}, {114, 120}, },
 			{{-1, 35}, {32, 67}, },
 			{{-1, 36}, },
 			{{-1, 115}, },
@@ -2309,17 +2305,17 @@ public class Parser
 			{{-1, 40}, },
 			{{-1, 41}, },
 			{{-1, 42}, },
-			{{-1, 53}, {28, 62}, {29, 63}, {48, 72}, {64, 87}, {65, 88}, {66, 90}, {69, 91}, {92, 112}, {107, 117}, },
+			{{-1, 53}, {28, 62}, {29, 63}, {48, 72}, {64, 87}, {65, 88}, {66, 90}, {69, 91}, {70, 92}, {107, 117}, },
 			{{-1, 54}, {76, 96}, },
 			{{-1, 55}, {78, 98}, },
 			{{-1, 56}, {79, 99}, {80, 100}, },
 			{{-1, 57}, {81, 101}, {82, 102}, },
 			{{-1, 58}, {49, 73}, {50, 74}, {83, 103}, {84, 104}, },
-			{{-1, 119}, },
-			{{-1, 59}, {113, 120}, {123, 124}, },
+			{{-1, 118}, },
+			{{-1, 59}, {113, 119}, {122, 123}, },
 			{{-1, 60}, {20, 43}, {32, 43}, },
 			{{-1, 89}, },
-			{{-1, 108}, {117, 122}, },
+			{{-1, 108}, {117, 121}, },
 			{{-1, 61}, {20, 44}, {32, 44}, },
         };*/
     private static String[] errorMessages;
@@ -2343,9 +2339,9 @@ public class Parser
 			"expecting: '{'",
 			"expecting: ']'",
 			"expecting: '(', '[', '!', 'lire', nombre, identif",
-			"expecting: ',', '/', ';', '*', '-', '(', ')', '[', ']', '=', '<', '&', '|', '+', 'alors', 'faire', ':'",
+			"expecting: ',', '/', ';', '*', '-', '(', ')', '[', ']', '=', '<', '&', '|', '+', 'alors', 'faire', ':', '+='",
 			"expecting: '}'",
-			"expecting: '=', '+'",
+			"expecting: '=', '+='",
 			"expecting: ',', '/', ';', '*', '-', ')', ']', '=', '<', '&', '|', '+', 'alors', 'faire', ':'",
 			"expecting: '|', 'alors'",
 			"expecting: ',', ';', ')', ']', '&', '|', 'alors', 'faire'",
@@ -2356,18 +2352,18 @@ public class Parser
 			"expecting: ';', '|'",
 			"expecting: '(', ')', '[', '!', 'lire', nombre, identif",
 			"expecting: ';', '{', '}', 'si', 'sinon', 'tantque', 'retour', 'ecrire', identif, EOF",
-			"expecting: '='",
 			"expecting: ')', '|'",
 			"expecting: ',', ')', '|'",
 			"expecting: ']', '|'",
 			"expecting: '?'",
 			"expecting: ';', '{', '}', 'si', 'sinon', 'tantque', 'retour', 'ecrire', identif",
+			"expecting: ',', '/', ';', '*', '-', ')', ']', '=', '<', '&', '|', '+', 'alors', 'faire', ':', '+='",
 			"expecting: '(', 'lire', nombre, identif",
 			"expecting: ':'",
         };*/
     private static int[] errors;
 /*      {
-			0, 1, 2, 3, 4, 5, 6, 3, 4, 7, 8, 9, 3, 10, 11, 12, 3, 13, 9, 14, 15, 16, 4, 6, 17, 9, 15, 18, 18, 18, 2, 19, 15, 15, 15, 20, 15, 15, 15, 15, 15, 15, 15, 21, 5, 4, 12, 6, 18, 18, 18, 2, 22, 23, 24, 25, 26, 27, 27, 27, 22, 22, 28, 29, 18, 30, 18, 20, 31, 18, 32, 15, 33, 17, 27, 14, 18, 16, 18, 18, 18, 18, 18, 18, 18, 16, 15, 33, 34, 14, 35, 29, 18, 22, 36, 22, 24, 37, 25, 26, 26, 27, 27, 27, 27, 15, 5, 18, 14, 22, 22, 15, 29, 38, 16, 15, 15, 34, 15, 39, 39, 15, 14, 38, 27, 
+			0, 1, 2, 3, 4, 5, 6, 3, 4, 7, 8, 9, 3, 10, 11, 12, 3, 13, 9, 14, 15, 16, 4, 6, 17, 9, 15, 18, 18, 18, 2, 19, 15, 15, 15, 20, 15, 15, 15, 15, 15, 15, 15, 21, 5, 4, 12, 6, 18, 18, 18, 2, 22, 23, 24, 25, 26, 27, 27, 27, 22, 22, 28, 29, 18, 30, 18, 20, 31, 18, 18, 15, 32, 17, 27, 14, 18, 16, 18, 18, 18, 18, 18, 18, 18, 16, 15, 32, 33, 14, 34, 29, 29, 22, 35, 22, 24, 36, 25, 26, 26, 27, 27, 27, 27, 15, 5, 18, 14, 22, 37, 15, 15, 38, 16, 15, 15, 33, 39, 39, 15, 14, 38, 27, 
         };*/
 
     static 

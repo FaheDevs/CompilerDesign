@@ -41,6 +41,7 @@ nombre = chiffre+;
 identif = alpha alphanum*;
 point_intero = '?';
 points = ':';
+inc = '+=';
 
 Ignored Tokens
 
@@ -115,7 +116,7 @@ instecriture = ecrire parenthese_ouvrante exp parenthese_fermante point_virgule 
 
 instvide = point_virgule ;
 
-instincr =  var plus egale exp point_virgule;
+instincr =  var inc exp point_virgule;
 
 
 
